@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Herramienta_Trastorno_Habla</string>
+    <string name="text_email">Correo Electronico</string>
+    <string name="text_contrasena">Contraseña</string>
+    <string name="btn_login">Ingresar</string>
+    <string name="btn_registro">Registrarse</string>
+    <string name="txt_nombret">Nombre(s)</string>
+    <string name="Nombre_tepareuta">Nombre</string>
+    <string name="txt_apellido_tp">Apellido Paterno</string>
+    <string name="txt_apellidopt">Apellido paterno</string>
+    <string name="Apellido_mt">Apellido materno</string>
+    <string name="Apellidomt">Apellido Materno</string>
+    <string name="Titulo_t">Titulo</string>
+    <string name="titulo_t">Titulo</string>
+    <string name="Especialidad">Especialidad</string>
+    <string name="Telefono_t">Telefono</string>
+    <string name="Direccion">Dirección</string>
+    <string name="Cedula_Profesional">Cedula Profesional</string>
+    <string name="Correo_terapeuta">Correo Electronico</string>
+    <string name="text_contraseña">Contraseña</string>
+    <string name="Terminos">Terminos y condiciones</string>
+
+
+</resources>
