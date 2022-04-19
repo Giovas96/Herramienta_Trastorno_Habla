@@ -19,6 +19,8 @@
     <string name="Correo_terapeuta">Correo Electronico</string>
     <string name="text_contraseña">Contraseña</string>
     <string name="Terminos">Terminos y condiciones</string>
+    <string name="Datos_de_tutor">Datos de tutor 1</string>
+    <string name="Datos_tutor_2">Datos del tutor 2</string>
 
 
 </resources>

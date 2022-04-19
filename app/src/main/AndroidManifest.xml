@@ -9,7 +9,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Herramienta_Trastorno_Habla">
-        <activity android:name=".SesionTerapeuta"></activity>
+        <activity android:name=".Historialclinico"></activity>
+        <activity android:name=".Paciente" />
+        <activity android:name=".Registrarcita" />
+        <activity android:name=".Evolucionmotriz" />
+        <activity android:name=".Antecedentemedicos" />
+        <activity android:name=".Lenguaje" />
+        <activity android:name=".HistoriaEscolar" />
+        <activity android:name=".Habitos" />
+        <activity android:name=".Desarrollo" />
+        <activity android:name=".DatosGenerales" />
+        <activity android:name=".RegistroTutor" />
+        <activity android:name=".RegistroPaciente" />
+        <activity android:name=".SesionTerapeuta" />
         <activity android:name=".RegistrarseActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
