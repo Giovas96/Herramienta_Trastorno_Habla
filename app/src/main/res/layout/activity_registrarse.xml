@@ -6,245 +6,229 @@
     android:layout_height="match_parent"
     tools:context=".RegistrarseActivity">
 
-    <TextView
-        android:id="@+id/txt_nombre"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:text="@string/txt_nombret"
-        app:layout_constraintEnd_toStartOf="@+id/nombreterapeuta"
-        app:layout_constraintHorizontal_bias="0.54"
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="364dp"
+        android:layout_height="443dp"
+        android:layout_marginTop="92dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.448"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">>
 
-    <EditText
-        android:id="@+id/nombreterapeuta"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="28dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/Nombre_tepareuta"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="33dp"
+            android:orientation="horizontal">
 
-    <EditText
-        android:id="@+id/Apellidopt"
-        android:layout_width="208dp"
-        android:layout_height="44dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="28dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/txt_apellidopt"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nombreterapeuta" />
+            <TextView
+                android:id="@+id/txt_nombre"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_nombret" />
 
-    <TextView
-        android:id="@+id/txt_apellidopt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="16dp"
-        android:text="@string/txt_apellido_tp"
-        app:layout_constraintEnd_toStartOf="@+id/Apellidopt"
-        app:layout_constraintTop_toBottomOf="@+id/txt_nombre" />
+            <EditText
+                android:id="@+id/nombreterapeuta"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:inputType="textPersonName" />
+        </LinearLayout>
 
-    <TextView
-        android:id="@+id/txt_apellidomt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="@string/Apellido_mt"
-        app:layout_constraintEnd_toStartOf="@+id/Apellidomat"
-        app:layout_constraintHorizontal_bias="0.62"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_apellidopt" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:orientation="horizontal">
 
-    <EditText
-        android:id="@+id/Apellidomat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="28dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/Apellidomt"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Apellidopt" />
+            <TextView
+                android:id="@+id/txt_apellidopt"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_apellidopt" />
 
-    <EditText
-        android:id="@+id/text_titulot"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="28dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/titulo_t"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Apellidomat" />
+            <EditText
+                android:id="@+id/Apellidopt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:inputType="textPersonName" />
+        </LinearLayout>
 
-    <TextView
-        android:id="@+id/txt_titulot"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="40dp"
-        android:text="@string/Titulo_t"
-        app:layout_constraintEnd_toStartOf="@+id/text_titulot"
-        app:layout_constraintTop_toBottomOf="@+id/txt_apellidomt" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/txt_especialidadt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="28dp"
-        android:text="@string/Especialidad"
-        app:layout_constraintEnd_toStartOf="@+id/Text_especialidad"
-        app:layout_constraintTop_toBottomOf="@+id/txt_titulot" />
+            <TextView
+                android:id="@+id/txt_apellidomt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Apellido_mt" />
 
-    <EditText
-        android:id="@+id/Text_especialidad"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="28dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/Especialidad"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_titulot" />
+            <EditText
+                android:id="@+id/Apellidomat"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:inputType="textPersonName" />
+        </LinearLayout>
 
-    <TextView
-        android:id="@+id/txt_direccion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
-        android:text="@string/Direccion"
-        app:layout_constraintEnd_toStartOf="@+id/text_direcciont"
-        app:layout_constraintTop_toBottomOf="@+id/txt_telefonot" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:orientation="horizontal">
 
-    <EditText
-        android:id="@+id/text_direcciont"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="24dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/Direccion"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Text_telefonot" />
+            <TextView
+                android:id="@+id/txt_titulot"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="@string/Titulo_t" />
 
-    <TextView
-        android:id="@+id/txt_cedulapt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="8dp"
-        android:text="@string/Cedula_Profesional"
-        app:layout_constraintEnd_toStartOf="@+id/Text_cedula"
-        app:layout_constraintTop_toBottomOf="@+id/txt_direccion" />
+            <EditText
+                android:id="@+id/text_titulot"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:inputType="textPersonName" />
 
-    <EditText
-        android:id="@+id/Text_cedula"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="28dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/Cedula_Profesional"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_direcciont" />
+        </LinearLayout>
 
-    <TextView
-        android:id="@+id/txt_correot"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="4dp"
-        android:text="@string/Correo_terapeuta"
-        app:layout_constraintEnd_toStartOf="@+id/text_correot"
-        app:layout_constraintTop_toBottomOf="@+id/txt_cedulapt" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/txt_contrasenat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:layout_marginEnd="36dp"
-        android:text="@string/text_contraseña"
-        app:layout_constraintEnd_toStartOf="@+id/text_contrasena"
-        app:layout_constraintTop_toBottomOf="@+id/txt_correot" />
+            <TextView
+                android:id="@+id/txt_especialidadt"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="@string/Especialidad" />
 
-    <TextView
-        android:id="@+id/txt_telefonot"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="36dp"
-        android:text="@string/Telefono_t"
-        app:layout_constraintEnd_toStartOf="@+id/Text_telefonot"
-        app:layout_constraintTop_toBottomOf="@+id/txt_especialidadt" />
+            <EditText
+                android:id="@+id/Text_especialidad"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:inputType="textPersonName" />
+        </LinearLayout>
 
-    <EditText
-        android:id="@+id/Text_telefonot"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="28dp"
-        android:ems="10"
-        android:inputType="phone"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Text_especialidad" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txt_direccion"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="@string/Direccion" />
+
+            <EditText
+                android:id="@+id/text_direcciont"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:inputType="textPersonName" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txt_cedulapt"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="@string/Cedula_Profesional" />
+
+            <EditText
+                android:id="@+id/Text_cedula"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:ems="10"
+                android:inputType="textPersonName" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txt_telefonot"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="@string/Telefono_t" />
+
+            <EditText
+                android:id="@+id/Text_telefonot"
+                android:layout_width="match_parent"
+                android:layout_height="33dp"
+                android:ems="10"
+                android:inputType="phone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txt_correot"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="@string/Correo_terapeuta" />
+
+            <EditText
+                android:id="@+id/text_correot"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:ems="10"
+                android:inputType="textEmailAddress" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txt_contrasenat"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="@string/text_contraseña" />
+
+            <EditText
+                android:id="@+id/text_contrasena"
+                android:layout_width="match_parent"
+                android:layout_height="31dp"
+                android:ems="10"
+                android:inputType="textPassword" />
+        </LinearLayout>
+    </LinearLayout>
 
     <CheckBox
         android:id="@+id/Terminos_condiciones"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
+        android:layout_marginTop="44dp"
         android:text="@string/Terminos"
-        app:layout_constraintBottom_toTopOf="@+id/btn_registrarse"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout5" />
 
     <Button
         android:id="@+id/btn_registrarse"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
+        android:layout_marginTop="28dp"
         android:text="@string/btn_registro"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.481"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Terminos_condiciones" />
 
-    <EditText
-        android:id="@+id/text_correot"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="28dp"
-        android:ems="10"
-        android:inputType="textEmailAddress"
-        android:text="@string/Correo_terapeuta"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Text_cedula" />
-
-    <EditText
-        android:id="@+id/text_contrasena"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="28dp"
-        android:ems="10"
-        android:inputType="textPassword"
-        android:text="@string/text_contrasena"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_correot" />
 </androidx.constraintlayout.widget.ConstraintLayout>

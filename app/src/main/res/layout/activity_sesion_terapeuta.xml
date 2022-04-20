@@ -17,6 +17,13 @@
         <ListView
             android:id="@+id/menu_terapeuta"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:divider="@color/black"
+            android:dividerHeight="2dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+
+            />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Herramienta_Trastorno_Habla">
-        <activity android:name=".Historialclinico"></activity>
+        <activity android:name=".CustomListView"></activity>
+        <activity android:name=".Historialclinico" />
         <activity android:name=".Paciente" />
         <activity android:name=".Registrarcita" />
         <activity android:name=".Evolucionmotriz" />

@@ -2,7 +2,10 @@ package com.androidavanzado.herramienta_trastorno_habla;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 public class Paciente extends AppCompatActivity {
@@ -22,5 +25,23 @@ public class Paciente extends AppCompatActivity {
         MyAdapter adapter= new MyAdapter(Paciente.this, R.layout.list_item, opciones, iconos);
         menu_paciente.setAdapter(adapter);
 
+        menu_paciente.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                if (position==0){
+                    //click en Datos
+                   // startActivity(new Intent(Paciente.this, Paciente.class));
+                } else if (position ==1){
+                    //click en Historial clinico
+                    startActivity(new Intent(Paciente.this, Historialclinico.class));
+                } else if (position ==2){
+                    //Click en Evaluación
+
+                } else if (position ==3){
+                    //Click en Citas
+
+                }
+            }
+        });
     }
 }
