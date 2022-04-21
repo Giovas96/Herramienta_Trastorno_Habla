@@ -14,7 +14,7 @@ import android.widget.TextView;
 
 import java.util.*;
 
-public class CardAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
+public class CardAdapter extends RecyclerView.Adapter<CardAdapter.ViewHolder> {
     private List<listcarElement> mData;
     private LayoutInflater mInflater;
     private Context context;
@@ -32,22 +32,22 @@ public class CardAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
     }
 
     @Override
-    public ListAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType){
+    public CardAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType){
         View view=mInflater.inflate(R.layout.listcard_element, null);
-        return new ListAdapter.ViewHolder(view);
+        return new CardAdapter.ViewHolder (view);
 
     }
 
     @Override
-    public void onBindViewHolder(final ListAdapter.ViewHolder holder, final int position){
-        holder.bindData(mData.get(position));
+    public void onBindViewHolder(final CardAdapter.ViewHolder holder, final int position){
+        holder.bindData (mData.get(position));
     }
     
     public void setItems(List<listcarElement> items) {
         mData=items;
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    public class ViewHolder extends RecyclerView.ViewHolder {
         ImageView iconImage;
         TextView name, tutor,telefono;
 
@@ -60,7 +60,7 @@ public class CardAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
 
         }
 
-        void binData (final listcarElement item){
+        void bindData (final listcarElement item){
             iconImage.setColorFilter(Color.parseColor(item.getColor()), PorterDuff.Mode.SRC_IN);
             name.setText(item.getNombre());
             tutor.setText(item.getTutor());
