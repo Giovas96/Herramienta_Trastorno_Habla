@@ -3,14 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/menu_edit"
-        android:title="Editar datos"
         android:icon="@drawable/ic_baseline_edit_24"
+        android:title="Editar datos"
         app:showAsAction="withText" />
     <item
         android:id="@+id/menu_cerrar"
-        android:title="Cerrar sesión"
         android:icon="@drawable/ic_baseline_exit_to_app_24"
-        app:showAsAction="withText"/>
+        android:title="Cerrar sesión"
+        app:showAsAction="withText" />
 
 
 

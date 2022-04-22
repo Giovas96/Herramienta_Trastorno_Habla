@@ -1,28 +1,51 @@
 package com.androidavanzado.herramienta_trastorno_habla;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-
+import androidx.appcompat.widget.Toolbar;
+import android.os.Bundle;
+import android.view.Menu;
 import java.util.ArrayList;
 
 public class SesionTerapeuta extends AppCompatActivity {
 
+    Toolbar toolbar;
     private ListView menu_terapeuta;
     String opciones []={"Listar Pacientes", "Listar Actividades", "Calendario", "Información" };
     int iconos [] = {R.drawable.pacientes,R.drawable.juegos, R.drawable.calendario, R.drawable.info};
+
+    //Menu despegable Terapeuta
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_depegable_terapeuta, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        return super.onOptionsItemSelected(item);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sesion_terapeuta);
+        toolbar= findViewById(R.id.toolbar_bienvenido);
+        setSupportActionBar(toolbar);
 
+
+
+
+        //Menu Terapeuta
         menu_terapeuta= findViewById(R.id.menu_terapeuta);
 
 
@@ -49,4 +72,6 @@ public class SesionTerapeuta extends AppCompatActivity {
         });
 
     }
+
+
 }
