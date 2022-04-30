@@ -13,6 +13,8 @@
         android:layout_marginTop="64dp"
         android:gravity="center"
         android:text="Lenguaje"
+        android:textColor="@color/black"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -36,7 +38,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Balbuceó a los" />
+                android:text="Balbuceó a los"
+                android:textColor="@color/text"/>
 
             <EditText
                 android:id="@+id/editTextTextPersonName36"
@@ -57,7 +60,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Primeras palabras" />
+                android:text="Primeras palabras"
+                android:textColor="@color/text"/>
 
             <EditText
                 android:id="@+id/editTextTextPersonName41"
@@ -78,7 +82,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Dos palabras juntas" />
+                android:text="Dos palabras juntas"
+                android:textColor="@color/text"/>
 
             <EditText
                 android:id="@+id/editTextTextPersonName42"
@@ -99,7 +104,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Habló de corrido" />
+                android:text="Habló de corrido"
+                android:textColor="@color/text"/>
 
             <EditText
                 android:id="@+id/editTextTextPersonName43"
@@ -119,7 +125,8 @@
                 android:id="@+id/textView67"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Dificultad para pronunciar algún sonido (edad)" />
+                android:text="Dificultad para pronunciar algún sonido (edad)"
+                android:textColor="@color/text"/>
 
             <EditText
                 android:id="@+id/editTextTextPersonName44"
@@ -132,7 +139,8 @@
                 android:id="@+id/textView68"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Algún otro defecto en su lenguaje" />
+                android:text="Algún otro defecto en su lenguaje"
+                android:textColor="@color/text"/>
 
             <EditText
                 android:id="@+id/editTextTextPersonName45"
@@ -145,7 +153,8 @@
                 android:id="@+id/textView69"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Entiende cuando se le hable" />
+                android:text="Entiende cuando se le hable"
+                android:textColor="@color/text"/>
 
             <EditText
                 android:id="@+id/editTextTextPersonName46"
@@ -185,7 +194,8 @@
                 android:id="@+id/textView71"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Utiliza mímiza para comunicarse" />
+                android:text="Utiliza mímiza para comunicarse"
+                android:textColor="@color/text"/>
 
             <EditText
                 android:id="@+id/editTextTextPersonName48"
@@ -202,6 +212,7 @@
         android:layout_height="69dp"
         android:layout_marginStart="24dp"
         android:layout_marginBottom="16dp"
+        android:onClick="irEvolucionmotriz"
         android:text="Evolución matriz"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -212,6 +223,7 @@
         android:layout_height="62dp"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="20dp"
+        android:onClick="irAntecentemedicos"
         android:text="Antecedentes médicos"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />

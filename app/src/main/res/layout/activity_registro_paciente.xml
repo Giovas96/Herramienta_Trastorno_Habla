@@ -40,7 +40,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Nombre(s):" />
+                android:text="Nombre(s):"
+                android:textColor="@color/text"/>
 
             <EditText
                 android:id="@+id/editTextTextPersonName4"
@@ -61,7 +62,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Apellido Paterno:" />
+                android:text="Apellido Paterno:"
+                android:textColor="@color/text"/>
 
             <EditText
                 android:id="@+id/editTextTextPersonName5"
@@ -82,7 +84,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Apellido Materno:" />
+                android:text="Apellido Materno:"
+                android:textColor="@color/text"/>
 
             <EditText
                 android:id="@+id/editTextTextPersonName6"
@@ -103,7 +106,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Fecha de nacimiento:" />
+                android:text="Fecha de nacimiento:"
+                android:textColor="@color/text"/>
 
             <EditText
                 android:id="@+id/editTextDate"
@@ -124,7 +128,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Lugar en la famialia:" />
+                android:text="Lugar en la famialia:"
+                android:textColor="@color/text"/>
 
             <EditText
                 android:id="@+id/editTextTextPersonName7"
@@ -144,7 +149,8 @@
                 android:id="@+id/textView9"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Dirección:" />
+                android:text="Dirección:"
+                android:textColor="@color/text"/>
 
             <EditText
                 android:id="@+id/editTextTextPostalAddress"
@@ -164,7 +170,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Telefono:" />
+                android:text="Telefono:"
+                android:textColor="@color/text"/>
 
             <EditText
                 android:id="@+id/editTextPhone"
@@ -185,7 +192,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Escuela:" />
+                android:text="Escuela:"
+                android:textColor="@color/text"/>
 
             <EditText
                 android:id="@+id/editTextTextPersonName8"

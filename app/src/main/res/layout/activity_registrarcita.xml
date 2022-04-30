@@ -12,6 +12,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="72dp"
         android:text="Registrar cita"
+        android:textColor="@color/black"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.473"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,7 +38,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Fecha de cita" />
+                android:text="Fecha de cita"
+                android:textColor="@color/text"/>
 
             <EditText
                 android:id="@+id/editTextDate5"
@@ -58,7 +61,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Hora de cita" />
+                android:text="Hora de cita"
+                android:textColor="@color/text"/>
 
             <EditText
                 android:id="@+id/editTextTime"
@@ -79,7 +83,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Duración" />
+                android:text="Duración"
+                android:textColor="@color/text"/>
 
             <EditText
                 android:id="@+id/editTextTextPersonName62"
@@ -100,7 +105,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Motivo" />
+                android:text="Motivo"
+                android:textColor="@color/text"/>
 
             <EditText
                 android:id="@+id/editTextTextPersonName63"
@@ -120,7 +126,8 @@
                 android:id="@+id/textView104"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Observaciones" />
+                android:text="Observaciones"
+                android:textColor="@color/text"/>
 
             <EditText
                 android:id="@+id/editTextTextPersonName64"

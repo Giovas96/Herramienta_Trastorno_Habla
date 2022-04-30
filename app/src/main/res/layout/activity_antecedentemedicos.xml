@@ -10,8 +10,11 @@
         android:id="@+id/textView72"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="44dp"
         android:text="Antecedentes médicos"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,9 +23,10 @@
     <LinearLayout
         android:layout_width="383dp"
         android:layout_height="537dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="32dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.428"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView72">
 
@@ -31,7 +35,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Enfermedades (edad)" />
+            android:text="Enfermedades (edad)"
+            android:textColor="@color/text" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -43,7 +48,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Sarampión" />
+                android:text="Sarampión"
+                android:textColor="@color/text" />
 
             <EditText
                 android:id="@+id/editTextNumber3"
@@ -58,7 +64,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Varicela" />
+                android:text="Varicela"
+                android:textColor="@color/text" />
 
             <EditText
                 android:id="@+id/editTextNumber4"
@@ -80,7 +87,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Paperas" />
+                android:text="Paperas"
+                android:textColor="@color/text" />
 
             <EditText
                 android:id="@+id/editTextNumber5"
@@ -95,7 +103,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Influenza" />
+                android:text="Influenza"
+                android:textColor="@color/text" />
 
             <EditText
                 android:id="@+id/editTextNumber6"
@@ -116,7 +125,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Asma" />
+                android:text="Asma"
+                android:textColor="@color/text" />
 
             <EditText
                 android:id="@+id/editTextNumber7"
@@ -131,7 +141,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Otras" />
+                android:text="Otras"
+                android:textColor="@color/text" />
 
             <EditText
                 android:id="@+id/editTextNumber8"
@@ -151,7 +162,8 @@
                 android:id="@+id/textView83"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Ha sido hospitalizado (por qué)" />
+                android:text="Ha sido hospitalizado (por qué)"
+                android:textColor="@color/text" />
 
             <EditText
                 android:id="@+id/editTextTextPersonName50"
@@ -171,7 +183,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Pediatra" />
+                android:text="Pediatra"
+                android:textColor="@color/text" />
 
             <EditText
                 android:id="@+id/editTextTextPersonName1"
@@ -193,7 +206,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Teléfono" />
+                android:text="Teléfono"
+                android:textColor="@color/text" />
 
             <EditText
                 android:id="@+id/editTextPhone7"
@@ -208,7 +222,8 @@
                 android:layout_width="60dp"
                 android:layout_height="45dp"
                 android:layout_weight="1"
-                android:text="Fecha de ultima cita" />
+                android:text="Fecha de ultima cita"
+                android:textColor="@color/text" />
 
             <EditText
                 android:id="@+id/editTextDate8"
@@ -229,7 +244,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Dentista" />
+                android:text="Dentista"
+                android:textColor="@color/text" />
 
             <EditText
                 android:id="@+id/editTextTextPersonName2"
@@ -251,7 +267,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Teléfono" />
+                android:text="Teléfono"
+                android:textColor="@color/text" />
 
             <EditText
                 android:id="@+id/editTextPhone"
@@ -266,7 +283,8 @@
                 android:layout_width="60dp"
                 android:layout_height="45dp"
                 android:layout_weight="1"
-                android:text="Fecha de ultima cita" />
+                android:text="Fecha de ultima cita"
+                android:textColor="@color/text" />
 
             <EditText
                 android:id="@+id/editTextDate4"
@@ -287,7 +305,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Psicologo" />
+                android:text="Psicologo"
+                android:textColor="@color/text" />
 
             <EditText
                 android:id="@+id/editTextTextPersonName51"
@@ -309,7 +328,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Teléfono" />
+                android:text="Teléfono"
+                android:textColor="@color/text" />
 
             <EditText
                 android:id="@+id/editTextPhone6"
@@ -324,7 +344,8 @@
                 android:layout_width="60dp"
                 android:layout_height="45dp"
                 android:layout_weight="1"
-                android:text="Fecha de ultima cita" />
+                android:text="Fecha de ultima cita"
+                android:textColor="@color/text" />
 
             <EditText
                 android:id="@+id/editTextDate3"
@@ -344,6 +365,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginBottom="16dp"
+        android:onClick="irLenguaje"
         android:text="Lenguaje"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -354,6 +376,7 @@
         android:layout_height="65dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
+        android:onClick="irHistoriaEscolar"
         android:text="Historia escolar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />

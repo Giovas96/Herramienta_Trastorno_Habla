@@ -7,6 +7,7 @@
     tools:context=".Listarpacientes">
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listaviewpaciente"
         android:layout_width="384dp"
         android:layout_height="572dp"
         android:layout_marginBottom="24dp"

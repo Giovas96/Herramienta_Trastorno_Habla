@@ -13,6 +13,8 @@
         android:layout_marginTop="48dp"
         android:gravity="center"
         android:text="Datos Generales"
+        android:textColor="@color/black"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -36,7 +38,8 @@
                 android:layout_width="10dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Fecha:" />
+                android:text="Fecha:"
+                android:textColor="@color/text"/>
 
             <EditText
                 android:id="@+id/editTextDate2"
@@ -58,7 +61,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Nombre del entrevistado" />
+                android:text="Nombre del entrevistado"
+                android:textColor="@color/text"/>
 
             <EditText
                 android:id="@+id/editTextTextPersonName2"
@@ -79,7 +83,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="Relación con el paciente" />
+                android:text="Relación con el paciente"
+                android:textColor="@color/text"/>
 
             <EditText
                 android:id="@+id/editTextTextPersonName3"
@@ -100,7 +105,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Referido por" />
+                android:text="Referido por"
+                android:textColor="@color/text"/>
 
             <EditText
                 android:id="@+id/editTextTextPersonName13"
@@ -114,7 +120,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Nombre del paciente" />
+                android:text="Nombre del paciente"
+                android:textColor="@color/text"/>
 
             <EditText
                 android:id="@+id/editTextTextPersonName14"
@@ -128,7 +135,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Lugar de nacimiento" />
+                android:text="Lugar de nacimiento"
+                android:textColor="@color/text"/>
 
             <EditText
                 android:id="@+id/editTextTextPersonName15"
@@ -148,7 +156,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Fecha de nacimiento:" />
+                android:text="Fecha de nacimiento:"
+                android:textColor="@color/text"/>
 
             <EditText
                 android:id="@+id/editTextDate4"
@@ -156,7 +165,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
-                android:inputType="date" />
+                android:inputType="date"
+                android:textColor="@color/text"/>
         </LinearLayout>
 
     </LinearLayout>
@@ -167,6 +177,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="36dp"
         android:layout_marginBottom="40dp"
+        android:onClick="irDesarrollo"
         android:text="Desarrollo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -177,6 +188,7 @@
         android:layout_height="56dp"
         android:layout_marginStart="24dp"
         android:layout_marginBottom="32dp"
+        android:onClick="irAntecedentemedicos"
         android:text="Antecedentes médicos"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

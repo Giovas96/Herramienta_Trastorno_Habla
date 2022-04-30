@@ -13,6 +13,8 @@
         android:layout_marginTop="32dp"
         android:gravity="center"
         android:text="Hábitos"
+        android:textStyle="bold"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -37,7 +39,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Tomó leche materna ¿Cuánto tiempo?" />
+                android:text="Tomó leche materna ¿Cuánto tiempo?"
+                android:textColor="@color/text"/>
 
             <EditText
                 android:id="@+id/editTextTextPersonName22"
@@ -51,7 +54,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Tomó mamila ¿Cuánto tiempo?" />
+                android:text="Tomó mamila ¿Cuánto tiempo?"
+                android:textColor="@color/text"/>
 
             <EditText
                 android:id="@+id/editTextTextPersonName28"
@@ -71,7 +75,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Usó chupón" />
+                android:text="Usó chupón"
+                android:textColor="@color/text"/>
 
             <EditText
                 android:id="@+id/editTextTextPersonName29"
@@ -92,7 +97,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Se chupa el dedo" />
+                android:text="Se chupa el dedo"
+                android:textColor="@color/text"/>
 
             <EditText
                 android:id="@+id/editTextTextPersonName30"
@@ -113,7 +119,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Hubo problemas para alimentarlo" />
+                android:text="Hubo problemas para alimentarlo"
+                android:textColor="@color/text"/>
 
             <EditText
                 android:id="@+id/editTextTextPersonName31"
@@ -127,7 +134,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Edad en la que durmio toda la noche" />
+                android:text="Edad en la que durmio toda la noche"
+                android:textColor="@color/text"/>
 
             <EditText
                 android:id="@+id/editTextTextPersonName32"
@@ -141,7 +149,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="¿Cómo fue su sueño en la noche?" />
+                android:text="¿Cómo fue su sueño en la noche?"
+                android:textColor="@color/text"/>
 
             <EditText
                 android:id="@+id/editTextTextPersonName33"
@@ -158,6 +167,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
         android:layout_marginBottom="36dp"
+        android:onClick="irDesarrollo"
         android:text="Desarrollo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -168,6 +178,7 @@
         android:layout_height="63dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="32dp"
+        android:onClick="irevolucionmotriz"
         android:text="Evolución motriz"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />

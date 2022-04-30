@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "611355009414",
+    "project_id": "herramienta-trastorno-habla",
+    "storage_bucket": "herramienta-trastorno-habla.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:611355009414:android:007b46d51336b883504c07",
+        "android_client_info": {
+          "package_name": "com.androidavanzado.herramienta_trastorno_habla"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "611355009414-fempoefh560mffp4upts776vlpn2i6ij.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDB9mbyUqoizcUbG2QCH7hqRO41sHP0kPY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "611355009414-fempoefh560mffp4upts776vlpn2i6ij.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

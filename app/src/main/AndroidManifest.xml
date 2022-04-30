@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Herramienta_Trastorno_Habla">
-        <activity android:name=".Listarpacientes"></activity>
+        <activity android:name=".Calendario"></activity>
+        <activity android:name=".Listarcitas" />
+        <activity android:name=".Listarpacientes" />
         <activity android:name=".CustomListView" />
         <activity android:name=".Historialclinico" />
         <activity android:name=".Paciente" />

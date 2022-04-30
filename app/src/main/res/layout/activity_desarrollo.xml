@@ -13,14 +13,16 @@
         android:layout_marginTop="16dp"
         android:gravity="center"
         android:text="Desarrollo"
+        android:textColor="@color/black"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="399dp"
-        android:layout_height="298dp"
+        android:layout_width="391dp"
+        android:layout_height="302dp"
         android:layout_marginTop="12dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
@@ -38,7 +40,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Embarazo previo (incluir aborto)" />
+                android:text="Embarazo previo (incluir aborto)"
+                android:textColor="@color/text" />
 
             <EditText
                 android:id="@+id/editTextTextPersonName"
@@ -58,7 +61,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Embarazo deseado" />
+                android:text="Embarazo deseado"
+                android:textColor="@color/text" />
 
             <RadioButton
                 android:id="@+id/radioButton"
@@ -86,7 +90,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Esperaban" />
+                android:text="Esperaban"
+                android:textColor="@color/text" />
 
             <RadioButton
                 android:id="@+id/radioButton5"
@@ -113,7 +118,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Duración del embarazo" />
+                android:text="Duración del embarazo"
+                android:textColor="@color/text" />
 
             <EditText
                 android:id="@+id/editTextTextPersonName16"
@@ -134,7 +140,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="El bebé se movía durante el embarazo" />
+                android:text="El bebé se movía durante el embarazo"
+                android:textColor="@color/text" />
 
             <RadioButton
                 android:id="@+id/radioButton7"
@@ -161,7 +168,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Amenaza o intento de aborto" />
+                android:text="Amenaza o intento de aborto"
+                android:textColor="@color/text" />
 
             <RadioButton
                 android:id="@+id/radioButton9"
@@ -186,17 +194,20 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Nacimiento"
+        android:textColor="@color/black"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     <LinearLayout
-        android:layout_width="399dp"
-        android:layout_height="283dp"
+        android:layout_width="388dp"
+        android:layout_height="284dp"
         android:layout_marginTop="8dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.478"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView35">
 
@@ -225,7 +236,8 @@
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Incubadora" />
+                android:text="Incubadora"
+                android:textColor="@color/text" />
 
             <EditText
                 android:id="@+id/editTextTextPersonName18"
@@ -246,7 +258,8 @@
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Llanto" />
+                android:text="Llanto"
+                android:textColor="@color/text" />
 
             <EditText
                 android:id="@+id/editTextTextPersonName19"
@@ -261,7 +274,8 @@
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Color" />
+                android:text="Color"
+                android:textColor="@color/text" />
 
             <EditText
                 android:id="@+id/editTextTextPersonName20"
@@ -282,7 +296,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Transfuciones" />
+                android:text="Transfuciones"
+                android:textColor="@color/text" />
 
             <EditText
                 android:id="@+id/editTextTextPersonName21"
@@ -304,7 +319,8 @@
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Ictericia" />
+                android:text="Ictericia"
+                android:textColor="@color/text" />
 
             <EditText
                 android:id="@+id/editTextTextPersonName23"
@@ -319,7 +335,8 @@
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Apgar" />
+                android:text="Apgar"
+                android:textColor="@color/text" />
 
             <EditText
                 android:id="@+id/editTextTextPersonName24"
@@ -340,11 +357,12 @@
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Peso" />
+                android:text="Peso"
+                android:textColor="@color/text" />
 
             <EditText
                 android:id="@+id/editTextTextPersonName25"
-                android:layout_width="wrap_content"
+                android:layout_width="170dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
@@ -355,7 +373,8 @@
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Talla" />
+                android:text="Talla"
+                android:textColor="@color/text" />
 
             <EditText
                 android:id="@+id/editTextTextPersonName26"
@@ -376,7 +395,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Fórceps" />
+                android:text="Fórceps"
+                android:textColor="@color/text" />
 
             <EditText
                 android:id="@+id/editTextTextPersonName27"
@@ -393,6 +413,7 @@
         android:id="@+id/button4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="irDatosGenerales"
         android:text="Datos generales"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button5"
@@ -404,6 +425,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
+        android:onClick="irHabitos"
         android:text="Hábitos"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />

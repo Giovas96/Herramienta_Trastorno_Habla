@@ -13,6 +13,8 @@
         android:layout_marginTop="48dp"
         android:gravity="center"
         android:text="Historia escolar"
+        android:textColor="@color/black"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -37,7 +39,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Asistió a guardería" />
+                android:text="Asistió a guardería"
+                android:textColor="@color/text"/>
 
             <EditText
                 android:id="@+id/editTextTextPersonName34"
@@ -58,7 +61,8 @@
                 android:id="@+id/textView55"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Presentó angustia por separación" />
+                android:text="Presentó angustia por separación"
+                android:textColor="@color/text"/>
 
             <EditText
                 android:id="@+id/editTextTextPersonName35"
@@ -78,7 +82,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Edad en la que inició el kinder" />
+                android:text="Edad en la que inició el kinder"
+                android:textColor="@color/text"/>
 
             <EditText
                 android:id="@+id/editTextNumber"
@@ -100,7 +105,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Edad en la que inició la primaria" />
+                android:text="Edad en la que inició la primaria"
+                android:textColor="@color/text"/>
 
             <EditText
                 android:id="@+id/editTextNumber2"
@@ -121,7 +127,8 @@
                 android:id="@+id/textView58"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Opinión de la escuela acerca del niño" />
+                android:text="Opinión de la escuela acerca del niño"
+                android:textColor="@color/text"/>
 
             <EditText
                 android:id="@+id/editTextTextPersonName37"
@@ -140,14 +147,16 @@
                 android:id="@+id/textView59"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Cómo es su conducta escolar " />
+                android:text="Cómo es su conducta escolar"
+                android:textColor="@color/text"/>
 
             <EditText
                 android:id="@+id/editTextTextPersonName38"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="textPersonName" />
+                android:inputType="textPersonName"
+                android:textColor="@color/text"/>
         </LinearLayout>
 
         <LinearLayout
@@ -159,7 +168,8 @@
                 android:id="@+id/textView60"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Cambios de escuela (motivos)" />
+                android:text="Cambios de escuela (motivos)"
+                android:textColor="@color/text"/>
 
             <EditText
                 android:id="@+id/editTextTextPersonName39"
@@ -178,7 +188,8 @@
                 android:id="@+id/textView61"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Rendimiento académico" />
+                android:text="Rendimiento académico"
+                android:textColor="@color/text"/>
 
             <EditText
                 android:id="@+id/editTextTextPersonName40"
@@ -195,6 +206,7 @@
         android:layout_height="70dp"
         android:layout_marginStart="24dp"
         android:layout_marginBottom="24dp"
+        android:onClick="irAntecedentemedicos"
         android:text="Antecedentes médicos"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -205,6 +217,7 @@
         android:layout_height="59dp"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="32dp"
+        android:onClick="irDatosGenerales"
         android:text="Datos generales"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />

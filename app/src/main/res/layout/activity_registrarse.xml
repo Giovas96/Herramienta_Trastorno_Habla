@@ -9,8 +9,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayout5"
-        android:layout_width="364dp"
-        android:layout_height="443dp"
+        android:layout_width="372dp"
+        android:layout_height="492dp"
         android:layout_marginTop="92dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,57 +20,60 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="33dp"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/txt_nombre"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:text="@string/txt_nombret" />
+                android:text="@string/txt_nombret"
+                android:textColor="@color/text" />
 
             <EditText
                 android:id="@+id/nombreterapeuta"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textPersonName" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="37dp"
+            android:layout_height="57dp"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/txt_apellidopt"
                 android:layout_width="130dp"
                 android:layout_height="wrap_content"
-                android:text="@string/txt_apellidopt" />
+                android:text="@string/txt_apellidopt"
+                android:textColor="@color/text" />
 
             <EditText
                 android:id="@+id/Apellidopt"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textPersonName" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="41dp"
+            android:layout_height="56dp"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/txt_apellidomt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/Apellido_mt" />
+                android:text="@string/Apellido_mt"
+                android:textColor="@color/text" />
 
             <EditText
                 android:id="@+id/Apellidomat"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textPersonName" />
         </LinearLayout>
@@ -84,7 +87,8 @@
                 android:id="@+id/txt_titulot"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:text="@string/Titulo_t" />
+                android:text="@string/Titulo_t"
+                android:textColor="@color/text" />
 
             <EditText
                 android:id="@+id/text_titulot"
@@ -104,7 +108,8 @@
                 android:id="@+id/txt_especialidadt"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:text="@string/Especialidad" />
+                android:text="@string/Especialidad"
+                android:textColor="@color/text" />
 
             <EditText
                 android:id="@+id/Text_especialidad"
@@ -123,7 +128,8 @@
                 android:id="@+id/txt_direccion"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:text="@string/Direccion" />
+                android:text="@string/Direccion"
+                android:textColor="@color/text" />
 
             <EditText
                 android:id="@+id/text_direcciont"
@@ -142,50 +148,53 @@
                 android:id="@+id/txt_cedulapt"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:text="@string/Cedula_Profesional" />
+                android:text="@string/Cedula_Profesional"
+                android:textColor="@color/text" />
 
             <EditText
                 android:id="@+id/Text_cedula"
                 android:layout_width="match_parent"
-                android:layout_height="32dp"
+                android:layout_height="match_parent"
                 android:ems="10"
                 android:inputType="textPersonName" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="44dp"
+            android:layout_height="58dp"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/txt_telefonot"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:text="@string/Telefono_t" />
+                android:text="@string/Telefono_t"
+                android:textColor="@color/text" />
 
             <EditText
                 android:id="@+id/Text_telefonot"
                 android:layout_width="match_parent"
-                android:layout_height="33dp"
+                android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="phone" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="42dp"
+            android:layout_height="60dp"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/txt_correot"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:text="@string/Correo_terapeuta" />
+                android:text="@string/Correo_terapeuta"
+                android:textColor="@color/text" />
 
             <EditText
                 android:id="@+id/text_correot"
                 android:layout_width="match_parent"
-                android:layout_height="32dp"
+                android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textEmailAddress" />
 
@@ -193,19 +202,20 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="44dp"
+            android:layout_height="62dp"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/txt_contrasenat"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:text="@string/text_contraseña" />
+                android:text="@string/text_contraseña"
+                android:textColor="@color/text" />
 
             <EditText
                 android:id="@+id/text_contrasena"
                 android:layout_width="match_parent"
-                android:layout_height="31dp"
+                android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textPassword" />
         </LinearLayout>
@@ -215,9 +225,10 @@
         android:id="@+id/Terminos_condiciones"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="28dp"
         android:text="@string/Terminos"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout5" />
 
@@ -225,7 +236,7 @@
         android:id="@+id/btn_registrarse"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="8dp"
         android:text="@string/btn_registro"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
