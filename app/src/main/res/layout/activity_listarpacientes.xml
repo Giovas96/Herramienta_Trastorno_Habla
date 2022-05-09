@@ -5,11 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Listarpacientes">
-
+    <include layout="@layout/toolbar_listar_pacientes"/>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/listaviewpaciente"
         android:layout_width="384dp"
-        android:layout_height="572dp"
+        android:layout_height="562dp"
         android:layout_marginBottom="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

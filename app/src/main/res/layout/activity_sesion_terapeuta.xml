@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background_general"
+    android:visibility="visible"
     tools:context=".SesionTerapeuta">
 
     <include
@@ -11,7 +13,47 @@
         layout="@layout/toolbar_bienvenido"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="370dp"
+        android:layout_height="240dp"
+        android:layout_marginTop="56dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbar_bienvenido">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="134dp"
+            android:icon="@drawable/perfil_terapeuta"
+            tools:srcCompat="@drawable/perfil_terapeuta" />
+
+        <TextView
+            android:id="@+id/textTerapeuta"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:gravity="center"
+            android:text="Terapeuta"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/IdUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/CorreoTerapeuta"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:gravity="center"
+            android:text="Terapeuta"
+            android:textSize="30sp" />
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="415dp"

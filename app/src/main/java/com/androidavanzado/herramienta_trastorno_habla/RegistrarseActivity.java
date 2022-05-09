@@ -55,6 +55,8 @@ public class RegistrarseActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 registerUser();
+                Intent i = new Intent(RegistrarseActivity.this, SesionTerapeuta.class);
+                startActivity(i);
             }
         });
 

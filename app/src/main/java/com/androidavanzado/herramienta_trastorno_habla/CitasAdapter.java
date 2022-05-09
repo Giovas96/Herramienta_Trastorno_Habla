@@ -51,7 +51,7 @@ public class CitasAdapter extends RecyclerView.Adapter<CitasAdapter.ViewHolder> 
 
         ViewHolder(View itemView){
             super(itemView);
-            iconImage=itemView.findViewById(R.id.ImageView);
+            iconImage=itemView.findViewById(R.id.Imagelistarpaciente);
             name=itemView.findViewById(R.id.nombrepaciente);
             fecha=itemView.findViewById(R.id.fechacita);
             hora=itemView.findViewById(R.id.horacita);

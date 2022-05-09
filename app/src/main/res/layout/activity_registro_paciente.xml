@@ -4,15 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background_general"
     tools:context=".RegistroPaciente">
 
+    <include layout="@layout/toolbar_registrop" />
+
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/Datos_personales"
         android:layout_width="match_parent"
         android:layout_height="53dp"
         android:layout_marginTop="84dp"
         android:gravity="center"
-        android:text="Datos Personales"
+        android:text="@string/Datos_personales"
         android:textColor="@color/black"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -28,7 +31,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
+        app:layout_constraintTop_toBottomOf="@+id/Datos_personales">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -36,15 +39,15 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/textNombrespaci"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Nombre(s):"
+                android:text="@string/Nombre_paci"
                 android:textColor="@color/text"/>
 
             <EditText
-                android:id="@+id/editTextTextPersonName4"
+                android:id="@+id/editTextNombrespaci"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -58,15 +61,15 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/textView5"
+                android:id="@+id/textApellidoPpaci"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Apellido Paterno:"
+                android:text="@string/Apellido_P"
                 android:textColor="@color/text"/>
 
             <EditText
-                android:id="@+id/editTextTextPersonName5"
+                android:id="@+id/editTextApellidoPpaci"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -80,15 +83,15 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/textView6"
+                android:id="@+id/textApellidoMpaci"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Apellido Materno:"
+                android:text="@string/Apellido_M"
                 android:textColor="@color/text"/>
 
             <EditText
-                android:id="@+id/editTextTextPersonName6"
+                android:id="@+id/editTextApellidoMpaci"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -102,16 +105,16 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/textView7"
+                android:id="@+id/textFechanacpaci"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Fecha de nacimiento:"
+                android:text="@string/Fecha_nac"
                 android:textColor="@color/text"/>
 
             <EditText
-                android:id="@+id/editTextDate"
-                android:layout_width="wrap_content"
+                android:id="@+id/editTextFechanacpaci"
+                android:layout_width="114dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
@@ -124,15 +127,15 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView8"
+                android:id="@+id/textLugarpaci"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Lugar en la famialia:"
+                android:text="@string/Lugar"
                 android:textColor="@color/text"/>
 
             <EditText
-                android:id="@+id/editTextTextPersonName7"
+                android:id="@+id/editLugarpaci"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -146,14 +149,14 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView9"
+                android:id="@+id/textDireccionpaci"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Dirección:"
+                android:text="@string/Direccion_paci"
                 android:textColor="@color/text"/>
 
             <EditText
-                android:id="@+id/editTextTextPostalAddress"
+                android:id="@+id/editTextDireccionpaci"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -166,15 +169,15 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/textView10"
+                android:id="@+id/textTelpaci"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Telefono:"
+                android:text="@string/Telefono_paci"
                 android:textColor="@color/text"/>
 
             <EditText
-                android:id="@+id/editTextPhone"
+                android:id="@+id/editTextTelpaci"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -188,15 +191,15 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/textView11"
+                android:id="@+id/textEscuelapaci"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Escuela:"
+                android:text="@string/Escuela"
                 android:textColor="@color/text"/>
 
             <EditText
-                android:id="@+id/editTextTextPersonName8"
+                android:id="@+id/editTextEscuelapaci"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -204,15 +207,25 @@
                 android:inputType="textPersonName" />
         </LinearLayout>
 
+        <EditText
+            android:id="@+id/idpac"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_weight="1"
+            android:text="idpaciente"
+            android:textColor="@color/text"/>
+
+
     </LinearLayout>
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btn_DatosTutor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="36dp"
         android:layout_marginBottom="16dp"
-        android:text="Datos del tutor"
+        android:text="@string/Datos_tutor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 

@@ -8,8 +8,6 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.util.ArrayList;
-
 public class MyAdapter extends BaseAdapter {
 
         private Context context;
@@ -47,7 +45,7 @@ public class MyAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View view, ViewGroup viewGroup) {
         view = inflater.inflate(R.layout.activity_custom_list_view, null);
-        TextView textoelemento= view.findViewById(R.id.textView);
+        TextView textoelemento= view.findViewById(R.id.Datos_personales);
         ImageView iconoelemento= view.findViewById(R.id.imageIcon);
         textoelemento.setText(listOpciones[position]);
         iconoelemento.setImageResource(listIcons[position]);

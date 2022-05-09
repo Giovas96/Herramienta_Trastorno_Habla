@@ -19,7 +19,7 @@
             android:orientation="horizontal"
             android:padding="6dp">
             <ImageView
-                android:id="@+id/ImageView"
+                android:id="@+id/Imagelistarpaciente"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_alignParentStart="true"
@@ -36,10 +36,10 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="4dp"
                 android:layout_marginTop="2dp"
-                android:layout_toEndOf="@+id/ImageView"
+                android:layout_toEndOf="@+id/Imagelistarpaciente"
                 android:orientation="vertical"
                 android:layout_marginLeft="4dp"
-                android:layout_toRightOf="@+id/ImageView">
+                android:layout_toRightOf="@+id/Imagelistarpaciente">
                 <TextView
                     android:id="@+id/nombrepaciente"
                     android:layout_width="match_parent"
@@ -49,20 +49,63 @@
                     android:textColor="@color/black"
                     android:textSize="24sp"
                     android:textStyle="bold" />
+
                 <TextView
-                    android:id="@+id/nombretutor"
+                    android:id="@+id/apellidopatp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="tutor"
+                    android:text="apellido paterno"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/apellidomatp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="apellido materno"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+
+                <TextView
+                    android:id="@+id/fechanacp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text="fechanacp"
                     android:textColor="@color/black"
                     android:textSize="16sp"/>
                 <TextView
-                    android:id="@+id/cardteltutor"
+                    android:id="@+id/lugarp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="lugarp"
+                    android:visibility="gone"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"/>
+                <TextView
+                    android:id="@+id/direccionp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="direccionp"
+                    android:visibility="gone"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"/>
+                <TextView
+                    android:id="@+id/telefonop"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="telefono"
                     android:textColor="@color/black"
-                    android:textSize="16sp" />
+                    android:textSize="16sp"/>
+                <TextView
+                    android:id="@+id/escuelap"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="escuelap"
+                    android:visibility="gone"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"/>
 
             </LinearLayout>
 

@@ -22,5 +22,17 @@
     <string name="Datos_de_tutor">Datos de tutor 1</string>
     <string name="Datos_tutor_2">Datos del tutor 2</string>
 
+    <!--Datos del paciente-->
+    <string name="Datos_tutor">Datos del tutor</string>
+    <string name="Datos_personales">Datos Personales</string>
+    <string name="Nombre_paci">Nombre(s):</string>
+    <string name="Apellido_P">Apellido Paterno:</string>
+    <string name="Apellido_M">Apellido Materno:</string>
+    <string name="Fecha_nac">Fecha de nacimiento (DD/MM/AAAA):</string>
+    <string name="Lugar">Lugar en la familia:</string>
+    <string name="Direccion_paci">Dirección:</string>
+    <string name="Telefono_paci">Teléfono:</string>
+    <string name="Escuela">Escuela:</string>
+
 
 </resources>

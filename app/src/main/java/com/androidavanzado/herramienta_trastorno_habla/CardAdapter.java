@@ -1,4 +1,4 @@
-package com.androidavanzado.herramienta_trastorno_habla;
+/*package com.androidavanzado.herramienta_trastorno_habla;
 
 
 import androidx.recyclerview.widget.ListAdapter;
@@ -49,22 +49,24 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.ViewHolder> {
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         ImageView iconImage;
-        TextView name, tutor,telefono;
+        TextView name, apellidopat, apellidomat ,telefono;
 
         ViewHolder(View itemView){
             super(itemView);
-            iconImage=itemView.findViewById(R.id.ImageView);
+            iconImage=itemView.findViewById(R.id.Imagelistarpaciente);
             name=itemView.findViewById(R.id.nombrepaciente);
-            tutor=itemView.findViewById(R.id.nombretutor);
+            apellidopat=itemView.findViewById(R.id.apellidopatp);
+            apellidomat=itemView.findViewById(R.id.apellidomatp);
             telefono=itemView.findViewById(R.id.cardteltutor);
 
         }
 
         void bindData (final listcarElement item){
-            iconImage.setColorFilter(Color.parseColor(item.getColor()), PorterDuff.Mode.SRC_IN);
+
             name.setText(item.getNombre());
-            tutor.setText(item.getTutor());
+           apellidopat.setText(item.getApellidop());
+           apellidomat.setText(item.getApellidom());
             telefono.setText(item.getTelefono());
         }
     }
-}
+}*/

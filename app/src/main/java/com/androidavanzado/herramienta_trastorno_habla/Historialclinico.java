@@ -1,12 +1,15 @@
 package com.androidavanzado.herramienta_trastorno_habla;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 public class Historialclinico extends AppCompatActivity {
 
@@ -18,9 +21,17 @@ public class Historialclinico extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_historialclinico);
+       ImageView back= findViewById(R.id.back_historial);
+        TextView tittle= findViewById(R.id.title_historial);
 
-        menu_historial= findViewById(R.id.menu_historial);
-
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Historialclinico.this, Paciente.class);
+                startActivity(i);
+            }
+        });
+        menu_historial = findViewById(R.id.menu_historial);
         //ArrayAdapter <String> adapter= new ArrayAdapter<String>(SesionTerapeuta.this, android.R.layout.simple_list_item_1, opciones);
         MyAdapter adapter= new MyAdapter(Historialclinico.this, R.layout.list_item, opciones, iconos);
         menu_historial.setAdapter(adapter);
