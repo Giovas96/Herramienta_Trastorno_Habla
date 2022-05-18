@@ -7,23 +7,27 @@
     android:background="@color/background_general"
     tools:context=".Lenguaje">
     <include layout="@layout/toolbar_historial_seccion"/>
+
     <TextView
         android:id="@+id/textView62"
-        android:layout_width="75dp"
-        android:layout_height="33dp"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
         android:layout_marginTop="64dp"
         android:gravity="center"
-        android:text="Lenguaje"
+        android:text="Registrar Lenguaje"
         android:textColor="@color/black"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
-        android:layout_width="361dp"
-        android:layout_height="508dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -40,10 +44,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Balbuceó a los"
-                android:textColor="@color/text"/>
+                android:textColor="@color/text" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName36"
+                android:id="@+id/editTextLbalbuceo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -62,10 +66,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Primeras palabras"
-                android:textColor="@color/text"/>
+                android:textColor="@color/text" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName41"
+                android:id="@+id/editTextLpalabras"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -84,10 +88,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Dos palabras juntas"
-                android:textColor="@color/text"/>
+                android:textColor="@color/text" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName42"
+                android:id="@+id/editTextLdpalabras"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -106,10 +110,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Habló de corrido"
-                android:textColor="@color/text"/>
+                android:textColor="@color/text" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName43"
+                android:id="@+id/editTextLcorrido"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -127,10 +131,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Dificultad para pronunciar algún sonido (edad)"
-                android:textColor="@color/text"/>
+                android:textColor="@color/text" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName44"
+                android:id="@+id/editTextLsonido"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -141,10 +145,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Algún otro defecto en su lenguaje"
-                android:textColor="@color/text"/>
+                android:textColor="@color/text" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName45"
+                android:id="@+id/editTextLdefecto"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -155,10 +159,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Entiende cuando se le hable"
-                android:textColor="@color/text"/>
+                android:textColor="@color/text" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName46"
+                android:id="@+id/editTextLentender"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -178,7 +182,7 @@
                 android:text="Tartamudea" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName47"
+                android:id="@+id/editTextLtartamudea"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -196,10 +200,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Utiliza mímiza para comunicarse"
-                android:textColor="@color/text"/>
+                android:textColor="@color/text" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName48"
+                android:id="@+id/editTextLmimiza"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="300dp"
+    android:layout_height="350dp"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:layout_gravity="center">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/elija_opcion"
+        android:textSize="28sp"
+        android:gravity="center"
+        android:textStyle="bold"/>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="18dp"
+        app:lottie_imageAssetsFolder="assets"
+        app:lottie_fileName="seleccionar.json"
+        app:lottie_loop="true"
+        app:lottie_autoPlay="true"/>
+
+    <Button
+        android:id="@+id/AgregarH"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="@string/Agregar"
+        android:visibility="visible"
+        app:icon="@drawable/ic_baseline_add_circle_24" />
+
+    <Button
+        android:id="@+id/ConsultarH"
+        android:text="@string/Consultar"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        app:icon="@drawable/ic_baseline_remove_red_eye_24"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/EditarH"
+        android:text="@string/Editar"
+        android:layout_marginTop="10dp"
+        app:icon = "@drawable/ic_baseline_edit_24"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -10,11 +10,11 @@
 
     <TextView
         android:id="@+id/textView12"
-        android:layout_width="150dp"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="60dp"
         android:gravity="center"
-        android:text="Desarrollo"
+        android:text="Registrar Desarrollo"
         android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -25,8 +25,11 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="369dp"
-        android:layout_height="325dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -46,7 +49,7 @@
                 android:textColor="@color/text" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName"
+                android:id="@+id/editTextDembarazo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -66,19 +69,26 @@
                 android:text="Embarazo deseado"
                 android:textColor="@color/text" />
 
-            <RadioButton
-                android:id="@+id/radioButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <RadioGroup
+                android:layout_width="198dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="Sí" />
+                android:orientation="horizontal">
 
-            <RadioButton
-                android:id="@+id/radioButton2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="No" />
+                <RadioButton
+                    android:id="@+id/radioButtonDembarazosi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Sí" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonDembarazono"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="No" />
+            </RadioGroup>
 
         </LinearLayout>
 
@@ -95,19 +105,27 @@
                 android:text="Esperaban"
                 android:textColor="@color/text" />
 
-            <RadioButton
-                android:id="@+id/radioButton5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <RadioGroup
+                android:layout_width="198dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="Niño" />
+                android:orientation="horizontal">
 
-            <RadioButton
-                android:id="@+id/radioButton6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Niña" />
+                <RadioButton
+                    android:id="@+id/radioButtonniño"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Niño" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonniña"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Niña" />
+            </RadioGroup>
+
         </LinearLayout>
 
         <LinearLayout
@@ -124,7 +142,7 @@
                 android:textColor="@color/text" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName16"
+                android:id="@+id/editTexDduracion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -145,19 +163,27 @@
                 android:text="El bebé se movía durante el embarazo"
                 android:textColor="@color/text" />
 
-            <RadioButton
-                android:id="@+id/radioButton7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <RadioGroup
+                android:layout_width="135dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="Sí" />
+                android:orientation="horizontal">
 
-            <RadioButton
-                android:id="@+id/radioButton8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="No" />
+                <RadioButton
+                    android:id="@+id/radioButtonDmoviasi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Sí" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonDmoviano"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="No" />
+            </RadioGroup>
+
         </LinearLayout>
 
         <LinearLayout
@@ -173,19 +199,27 @@
                 android:text="Amenaza o intento de aborto"
                 android:textColor="@color/text" />
 
-            <RadioButton
-                android:id="@+id/radioButton9"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <RadioGroup
+                android:layout_width="197dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="Sí" />
+                android:orientation="horizontal">
 
-            <RadioButton
-                android:id="@+id/radioButton10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="No" />
+                <RadioButton
+                    android:id="@+id/radioButtonDamenazasi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Sí" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonDamanezano"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="No" />
+            </RadioGroup>
+
         </LinearLayout>
 
     </LinearLayout>
@@ -200,12 +234,16 @@
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     <LinearLayout
-        android:layout_width="365dp"
-        android:layout_height="327dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.456"
@@ -225,7 +263,7 @@
                 android:text="Parto" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName17"
+                android:id="@+id/editTextDparto"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -241,7 +279,7 @@
                 android:textColor="@color/text" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName18"
+                android:id="@+id/editTextincubadora"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -263,7 +301,7 @@
                 android:textColor="@color/text" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName19"
+                android:id="@+id/editTextDllanto"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -279,7 +317,7 @@
                 android:textColor="@color/text" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName20"
+                android:id="@+id/editTextDcolor"
                 android:layout_width="155dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -301,7 +339,7 @@
                 android:textColor="@color/text" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName21"
+                android:id="@+id/editTextDtransfuciones"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -324,7 +362,7 @@
                 android:textColor="@color/text" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName23"
+                android:id="@+id/editTextDictericia"
                 android:layout_width="137dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -340,7 +378,7 @@
                 android:textColor="@color/text" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName24"
+                android:id="@+id/editTextDapgar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -362,7 +400,7 @@
                 android:textColor="@color/text" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName25"
+                android:id="@+id/editTextDpeso"
                 android:layout_width="170dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -378,7 +416,7 @@
                 android:textColor="@color/text" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName26"
+                android:id="@+id/editTextDtalla"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -400,7 +438,7 @@
                 android:textColor="@color/text" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName27"
+                android:id="@+id/editTextDforceps"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"

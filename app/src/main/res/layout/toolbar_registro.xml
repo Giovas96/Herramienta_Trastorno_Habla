@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/toolbar">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/registro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_toEndOf="@+id/back_historial"
+            android:textColor="@android:color/white"
+            android:layout_centerVertical="true"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            android:text="Registro de usuario"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

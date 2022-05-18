@@ -16,9 +16,12 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
-        android:layout_width="370dp"
-        android:layout_height="240dp"
+        android:id="@+id/linearLayout6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="56dp"
+        android:layout_marginEnd="24dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,9 +30,10 @@
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="match_parent"
-            android:layout_height="134dp"
+            android:layout_height="110dp"
             android:icon="@drawable/perfil_terapeuta"
-            tools:srcCompat="@drawable/perfil_terapeuta" />
+            android:visibility="visible"
+            app:srcCompat="@drawable/perfil_terapeuta" />
 
         <TextView
             android:id="@+id/textTerapeuta"
@@ -37,7 +41,8 @@
             android:layout_height="38dp"
             android:gravity="center"
             android:text="Terapeuta"
-            android:textSize="30sp" />
+            android:textSize="30sp"
+            android:visibility="visible" />
 
         <TextView
             android:id="@+id/IdUser"
@@ -52,16 +57,20 @@
             android:layout_height="38dp"
             android:gravity="center"
             android:text="Terapeuta"
-            android:textSize="30sp" />
+            android:textSize="30sp"
+            android:visibility="visible" />
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="415dp"
-        android:layout_height="435dp"
+        android:layout_width="363dp"
+        android:layout_height="457dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout6">
 
         <ListView
             android:id="@+id/menu_terapeuta"

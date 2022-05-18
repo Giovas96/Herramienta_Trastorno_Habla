@@ -10,21 +10,25 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="139dp"
+        android:layout_width="match_parent"
         android:layout_height="41dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="64dp"
         android:gravity="center"
-        android:text="Datos Generales"
+        android:text="Registrar Datos Generales"
         android:textColor="@color/black"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
-        android:layout_width="377dp"
-        android:layout_height="465dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -44,7 +48,7 @@
                 android:textColor="@color/text" />
 
             <EditText
-                android:id="@+id/editTextDate2"
+                android:id="@+id/editTextDGfecha"
                 android:layout_width="235dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -67,7 +71,7 @@
                 android:textColor="@color/text" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName2"
+                android:id="@+id/editTextDGentrevistado"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -89,7 +93,7 @@
                 android:textColor="@color/text" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName3"
+                android:id="@+id/editTextDGrelacion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -111,7 +115,7 @@
                 android:textColor="@color/text" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName13"
+                android:id="@+id/editTextDGreferido"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -126,7 +130,7 @@
                 android:textColor="@color/text" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName14"
+                android:id="@+id/editTextDGpaciente"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -141,7 +145,7 @@
                 android:textColor="@color/text" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName15"
+                android:id="@+id/editTextDGnacimiento"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -162,7 +166,7 @@
                 android:textColor="@color/text" />
 
             <EditText
-                android:id="@+id/editTextDate4"
+                android:id="@+id/editTextDGfechanac"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -190,8 +194,8 @@
         android:layout_height="56dp"
         android:layout_marginStart="24dp"
         android:layout_marginBottom="32dp"
-        android:onClick="irAntecedentemedicos"
-        android:text="Antecedentes médicos"
+        android:onClick="irHistoriaEscolar"
+        android:text="Historia escolar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 

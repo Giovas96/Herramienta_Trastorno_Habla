@@ -41,9 +41,9 @@ public class RegistroPaciente extends AppCompatActivity {
 
         mAuth=FirebaseAuth.getInstance();
         terapeuta= FirebaseFirestore.getInstance();
-        //FirebaseUser user= mAuth.getCurrentUser();
+
         idprincipal = mAuth.getCurrentUser().getUid();
-        //idpaciente = mAuth.getCurrentUser().getUid();
+
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -70,7 +70,6 @@ public class RegistroPaciente extends AppCompatActivity {
 
 
                     Pacientes paciente= new Pacientes(nombre, apellidop, apellidom, fecha, lugar, direccion, telefono, escuela);
-                    //String id = terapeuta.collection("terapeutas").document(idprincipal).collection("paciente").document(idpaciente).getId();
                     DocumentReference documentReference = terapeuta.collection("terapeutas").document(idprincipal);
                     documentReference.collection("paciente").add(paciente).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                         @Override

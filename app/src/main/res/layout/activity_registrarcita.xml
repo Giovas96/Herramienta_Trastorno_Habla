@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background_general"
     tools:context=".Registrarcita">
 
     <TextView
@@ -11,8 +12,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="72dp"
-        android:text="Registrar cita"
+        android:text="Registrar Cita"
         android:textColor="@color/black"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.473"
@@ -20,9 +22,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
-        android:layout_width="363dp"
+        android:layout_width="match_parent"
         android:layout_height="365dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="36dp"
+        android:layout_marginEnd="16dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,7 +43,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Fecha de cita"
-                android:textColor="@color/text"/>
+                android:textColor="@color/text" />
 
             <EditText
                 android:id="@+id/editTextDate5"
@@ -62,7 +66,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Hora de cita"
-                android:textColor="@color/text"/>
+                android:textColor="@color/text" />
 
             <EditText
                 android:id="@+id/editTextTime"
@@ -84,7 +88,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Duración"
-                android:textColor="@color/text"/>
+                android:textColor="@color/text" />
 
             <EditText
                 android:id="@+id/editTextTextPersonName62"
@@ -106,7 +110,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Motivo"
-                android:textColor="@color/text"/>
+                android:textColor="@color/text" />
 
             <EditText
                 android:id="@+id/editTextTextPersonName63"
@@ -127,7 +131,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Observaciones"
-                android:textColor="@color/text"/>
+                android:textColor="@color/text" />
 
             <EditText
                 android:id="@+id/editTextTextPersonName64"

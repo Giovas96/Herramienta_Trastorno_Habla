@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_general"
+    tools:context=".editar.Edtiar_Registro">
+
+    <include layout="@layout/toolbar_editar_terapeuta" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="372dp"
+        android:layout_height="492dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="92dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.448"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txt_nombre"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_nombret"
+                android:textColor="@color/text" />
+
+            <EditText
+                android:id="@+id/nombreterapeuta_c"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txt_apellidopt_c"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_apellidopt"
+                android:textColor="@color/text" />
+
+            <EditText
+                android:id="@+id/Apellidopt_c"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txt_apellidomt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Apellido_mt"
+                android:textColor="@color/text" />
+
+            <EditText
+                android:id="@+id/Apellidomat_c"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txt_titulot"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="@string/Titulo_t"
+                android:textColor="@color/text" />
+
+            <EditText
+                android:id="@+id/text_titulot_c"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txt_especialidadt"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="@string/Especialidad"
+                android:textColor="@color/text" />
+
+            <EditText
+                android:id="@+id/Text_especialidad_c"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:inputType="textPersonName" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txt_direccion"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="@string/Direccion"
+                android:textColor="@color/text" />
+
+            <EditText
+                android:id="@+id/text_direcciont_c"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:inputType="textPersonName" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txt_cedulapt"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="@string/Cedula_Profesional"
+                android:textColor="@color/text" />
+
+            <EditText
+                android:id="@+id/Text_cedula_c"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:inputType="textPersonName" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txt_telefonot"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="@string/Telefono_t"
+                android:textColor="@color/text" />
+
+            <EditText
+                android:id="@+id/Text_telefonot_c"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="phone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txt_correot"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="@string/Correo_terapeuta"
+                android:textColor="@color/text" />
+
+            <EditText
+                android:id="@+id/text_correot_c"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textEmailAddress" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txt_contrasenat"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="@string/text_contraseña"
+                android:textColor="@color/text" />
+
+            <EditText
+                android:id="@+id/text_contrasena_c"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPassword" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_registrarse_c"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="44dp"
+        android:text="Editar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

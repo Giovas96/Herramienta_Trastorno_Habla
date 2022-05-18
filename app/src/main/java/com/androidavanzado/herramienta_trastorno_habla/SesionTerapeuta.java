@@ -18,6 +18,7 @@ import android.view.Menu;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.androidavanzado.herramienta_trastorno_habla.editar.Edtiar_Registro;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.CollectionReference;
@@ -54,6 +55,8 @@ public class SesionTerapeuta extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
             case R.id.menu_edit:
+                Intent e= new Intent(SesionTerapeuta.this, Edtiar_Registro.class);
+                startActivity(e);
                 Toast.makeText(this, "Editar", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.menu_cerrar:

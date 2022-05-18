@@ -34,5 +34,12 @@
     <string name="Telefono_paci">Teléfono:</string>
     <string name="Escuela">Escuela:</string>
 
+    <!--DATOS DEL CUADRO DE OPCIONES-->
+    <string name="elija_opcion">Elija una opción</string>
+    <string name="Consultar">Consultar</string>
+    <string name="Editar">Editar</string>
+    <string name="Eliminar">Eliminar</string>
+    <string name="Agregar">Agregar</string>
+
 
 </resources>

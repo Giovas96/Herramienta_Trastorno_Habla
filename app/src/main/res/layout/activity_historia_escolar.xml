@@ -7,26 +7,30 @@
     android:background="@color/background_general"
     tools:context=".HistoriaEscolar">
     <include layout="@layout/toolbar_historial_seccion"/>
+
     <TextView
         android:id="@+id/textView53"
-        android:layout_width="173dp"
+        android:layout_width="match_parent"
         android:layout_height="38dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="64dp"
         android:gravity="center"
-        android:text="Historia escolar"
+        android:text="Registrar Historia escolar"
         android:textColor="@color/black"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
-        android:layout_width="359dp"
-        android:layout_height="504dp"
-        android:layout_marginTop="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintHorizontal_bias="0.538"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView53">
 
@@ -41,10 +45,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Asistió a guardería"
-                android:textColor="@color/text"/>
+                android:textColor="@color/text" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName34"
+                android:id="@+id/editTextHEguarderiar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -63,10 +67,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Presentó angustia por separación"
-                android:textColor="@color/text"/>
+                android:textColor="@color/text" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName35"
+                android:id="@+id/editTextHEangustia"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -84,10 +88,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Edad en la que inició el kinder"
-                android:textColor="@color/text"/>
+                android:textColor="@color/text" />
 
             <EditText
-                android:id="@+id/editTextNumber"
+                android:id="@+id/editTextHEkinder"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -107,10 +111,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Edad en la que inició la primaria"
-                android:textColor="@color/text"/>
+                android:textColor="@color/text" />
 
             <EditText
-                android:id="@+id/editTextNumber2"
+                android:id="@+id/editTextHEprimaria"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -129,10 +133,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Opinión de la escuela acerca del niño"
-                android:textColor="@color/text"/>
+                android:textColor="@color/text" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName37"
+                android:id="@+id/editTextTextHEopinionesc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -149,15 +153,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Cómo es su conducta escolar"
-                android:textColor="@color/text"/>
+                android:textColor="@color/text" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName38"
+                android:id="@+id/editTextHEconducta"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:textColor="@color/text"/>
+                android:textColor="@color/text" />
         </LinearLayout>
 
         <LinearLayout
@@ -170,10 +174,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Cambios de escuela (motivos)"
-                android:textColor="@color/text"/>
+                android:textColor="@color/text" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName39"
+                android:id="@+id/editTextHEcambiosesc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -190,10 +194,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Rendimiento académico"
-                android:textColor="@color/text"/>
+                android:textColor="@color/text" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName40"
+                android:id="@+id/editTextHErendimiento"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"

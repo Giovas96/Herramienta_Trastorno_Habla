@@ -20,11 +20,13 @@
 
     <TextView
         android:id="@+id/textView80"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
-        android:text="Evolución motriz"
+        android:layout_marginTop="80dp"
+        android:gravity="center"
+        android:text="Registrar Evolución Motriz"
         android:textColor="@color/black"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -32,9 +34,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
-        android:layout_width="382dp"
-        android:layout_height="487dp"
-        android:layout_marginTop="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.482"
@@ -51,10 +55,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="A qué edad sostuvo la cabeza"
-                android:textColor="@color/text"/>
+                android:textColor="@color/text" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName49"
+                android:id="@+id/editTextEMcabeza"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -72,10 +76,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Se sentó sin apoyo"
-                android:textColor="@color/text"/>
+                android:textColor="@color/text" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName52"
+                android:id="@+id/editTextEMsento"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -94,10 +98,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Se paró por si mismo"
-                android:textColor="@color/text"/>
+                android:textColor="@color/text" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName53"
+                android:id="@+id/editTextEMparo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -116,10 +120,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Gateó"
-                android:textColor="@color/text"/>
+                android:textColor="@color/text" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName54"
+                android:id="@+id/editTextEMgateo"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -132,10 +136,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="a qué edad"
-                android:textColor="@color/text"/>
+                android:textColor="@color/text" />
 
             <EditText
-                android:id="@+id/editTextNumber9"
+                android:id="@+id/editTextEMgateoedad"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -155,10 +159,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Durante cuánto tiempo"
-                android:textColor="@color/text"/>
+                android:textColor="@color/text" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName56"
+                android:id="@+id/editTextEMtiempogateo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -177,10 +181,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Caminó"
-                android:textColor="@color/text"/>
+                android:textColor="@color/text" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName57"
+                android:id="@+id/editTextEMcamino"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -199,10 +203,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Chocaba con los objetos"
-                android:textColor="@color/text"/>
+                android:textColor="@color/text" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName58"
+                android:id="@+id/editTextEMchocar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -215,7 +219,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Control de esfinteres:"
-            android:textColor="@color/text"/>
+            android:textColor="@color/text" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -228,10 +232,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Diurno"
-                android:textColor="@color/text"/>
+                android:textColor="@color/text" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName59"
+                android:id="@+id/editTextEMdiurno"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -244,10 +248,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Nocturno"
-                android:textColor="@color/text"/>
+                android:textColor="@color/text" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName60"
+                android:id="@+id/editTextEMnocturno"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -266,10 +270,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Mano y pie de preferencia"
-                android:textColor="@color/text"/>
+                android:textColor="@color/text" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName61"
+                android:id="@+id/editTextEMmanopieref"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"

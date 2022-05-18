@@ -160,7 +160,7 @@ public class RegistroTutor extends AppCompatActivity {
                             !casatd.isEmpty() && !proftd.isEmpty()){
 
                       Map<String, Object> mapd = new HashMap<>();
-                      mapd.put("Nombre()s", nombretd);
+                      mapd.put("Nombre(s)", nombretd);
                       mapd.put("Apellido Paterno", apellidoptd);
                       mapd.put("Apellido Materno", apellidomtd);
                       mapd.put("Fecha de nacimiento", fechanactd);

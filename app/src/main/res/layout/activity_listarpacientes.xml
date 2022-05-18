@@ -4,8 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background_general"
     tools:context=".Listarpacientes">
     <include layout="@layout/toolbar_listar_pacientes"/>
+
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/listaviewpaciente"
         android:layout_width="384dp"
