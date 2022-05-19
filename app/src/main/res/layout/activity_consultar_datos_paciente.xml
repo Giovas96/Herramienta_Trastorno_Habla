@@ -41,15 +41,15 @@
 
             <TextView
                 android:id="@+id/textNombrespaci"
-                android:layout_width="wrap_content"
+                android:layout_width="60dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/Nombre_paci"
-                android:textColor="@color/text" />
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/editTextNombrespaci_c"
-                android:layout_width="wrap_content"
+                android:layout_width="160dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
@@ -63,15 +63,15 @@
 
             <TextView
                 android:id="@+id/textApellidoPpaci"
-                android:layout_width="wrap_content"
+                android:layout_width="60dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/Apellido_P"
-                android:textColor="@color/text" />
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/editTextApellidoPpaci_c"
-                android:layout_width="wrap_content"
+                android:layout_width="160dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
@@ -85,15 +85,15 @@
 
             <TextView
                 android:id="@+id/textApellidoMpaci"
-                android:layout_width="wrap_content"
+                android:layout_width="60dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/Apellido_M"
-                android:textColor="@color/text" />
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/editTextApellidoMpaci_c"
-                android:layout_width="wrap_content"
+                android:layout_width="160dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
@@ -107,15 +107,15 @@
 
             <TextView
                 android:id="@+id/textFechanacpaci"
-                android:layout_width="wrap_content"
+                android:layout_width="60dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/Fecha_nac"
-                android:textColor="@color/text" />
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/editTextFechanacpaci_c"
-                android:layout_width="114dp"
+                android:layout_width="160dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
@@ -129,11 +129,11 @@
 
             <TextView
                 android:id="@+id/textLugarpaci"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/Lugar"
-                android:textColor="@color/text" />
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/editLugarpaci_c"
@@ -154,7 +154,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/Direccion_paci"
-                android:textColor="@color/text" />
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/editTextDireccionpaci_c"
@@ -171,15 +171,15 @@
 
             <TextView
                 android:id="@+id/textTelpaci"
-                android:layout_width="wrap_content"
+                android:layout_width="60dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/Telefono_paci"
-                android:textColor="@color/text" />
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/editTextTelpaci_c"
-                android:layout_width="wrap_content"
+                android:layout_width="160dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
@@ -193,15 +193,15 @@
 
             <TextView
                 android:id="@+id/textEscuelapaci"
-                android:layout_width="wrap_content"
+                android:layout_width="60dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/Escuela"
-                android:textColor="@color/text" />
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/editTextEscuelapaci_c"
-                android:layout_width="wrap_content"
+                android:layout_width="160dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"

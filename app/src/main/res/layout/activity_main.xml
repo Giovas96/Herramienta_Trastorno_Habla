@@ -81,4 +81,18 @@
             android:ems="10"
             android:inputType="textPassword" />
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/olvidar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="Olvide mi contraseña"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_registro" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

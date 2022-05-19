@@ -10,11 +10,11 @@
 
     <TextView
         android:id="@+id/textView62"
-        android:layout_width="163dp"
+        android:layout_width="match_parent"
         android:layout_height="32dp"
         android:layout_marginTop="64dp"
         android:gravity="center"
-        android:text="Lenguaje"
+        android:text="Consultar Lenguaje"
         android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -38,11 +38,11 @@
 
             <TextView
                 android:id="@+id/textView63"
-                android:layout_width="wrap_content"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Balbuceó a los"
-                android:textColor="@color/text"/>
+                android:text="Balbuceó a los:"
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/editTextLbalbuceo_c"
@@ -60,11 +60,11 @@
 
             <TextView
                 android:id="@+id/textView64"
-                android:layout_width="wrap_content"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Primeras palabras"
-                android:textColor="@color/text"/>
+                android:text="Primeras palabras:"
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/editTextLpalabras_c"
@@ -82,11 +82,11 @@
 
             <TextView
                 android:id="@+id/textView65"
-                android:layout_width="wrap_content"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Dos palabras juntas"
-                android:textColor="@color/text"/>
+                android:text="Dos palabras juntas:"
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/editTextLdpalabras_c"
@@ -104,11 +104,11 @@
 
             <TextView
                 android:id="@+id/textView66"
-                android:layout_width="wrap_content"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Habló de corrido"
-                android:textColor="@color/text"/>
+                android:text="Habló de corrido:"
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/editTextLcorrido_c"
@@ -128,42 +128,48 @@
                 android:id="@+id/textView67"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="Dificultad para pronunciar algún sonido (edad)"
-                android:textColor="@color/text"/>
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/editTextLsonido_c"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
+                android:gravity="center"
                 android:inputType="textPersonName" />
 
             <TextView
                 android:id="@+id/textView68"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="Algún otro defecto en su lenguaje"
-                android:textColor="@color/text"/>
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/editTextLdefecto_c"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
+                android:gravity="center"
                 android:inputType="textPersonName" />
 
             <TextView
                 android:id="@+id/textView69"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="Entiende cuando se le hable"
-                android:textColor="@color/text"/>
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/editTextLentender_c"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
+                android:gravity="center"
                 android:inputType="textPersonName" />
         </LinearLayout>
 
@@ -174,10 +180,11 @@
 
             <TextView
                 android:id="@+id/textView70"
-                android:layout_width="wrap_content"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Tartamudea" />
+                android:text="Tartamudea:"
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/editTextLtartamudea_c"
@@ -197,14 +204,16 @@
                 android:id="@+id/textView71"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="Utiliza mímiza para comunicarse"
-                android:textColor="@color/text"/>
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/editTextLmimiza_c"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
+                android:gravity="center"
                 android:inputType="textPersonName" />
         </LinearLayout>
     </LinearLayout>

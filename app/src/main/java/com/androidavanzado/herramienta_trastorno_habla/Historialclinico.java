@@ -202,7 +202,7 @@ public class Historialclinico extends AppCompatActivity {
                                     agregar.setOnClickListener(new View.OnClickListener() {
                                         @Override
                                         public void onClick(View v) {
-                                            i=new Intent(Historialclinico.this, Habitos.class);
+                                            i=new Intent(Historialclinico.this, Editar_Habitos.class);
                                             i.putExtra("idpa",idpaciente);
                                             startActivity(i);
                                         }

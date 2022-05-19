@@ -47,13 +47,14 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="Embarazo previo (incluir aborto)"
-                android:textColor="@color/text" />
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/editTextDembarazo_c"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
+                android:gravity="center"
                 android:inputType="textPersonName" />
         </LinearLayout>
 
@@ -64,15 +65,15 @@
 
             <TextView
                 android:id="@+id/textView29"
-                android:layout_width="wrap_content"
+                android:layout_width="237dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Embarazo deseado"
-                android:textColor="@color/text" />
+                android:text="Embarazo deseado:"
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/editTextDdeseado_c"
-                android:layout_width="198dp"
+                android:layout_width="135dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:orientation="horizontal" />
@@ -85,15 +86,15 @@
 
             <TextView
                 android:id="@+id/textView31"
-                android:layout_width="wrap_content"
+                android:layout_width="237dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Esperaban"
-                android:textColor="@color/text" />
+                android:text="Esperaban:"
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/editTextDesperaban_c"
-                android:layout_width="198dp"
+                android:layout_width="135dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:orientation="horizontal" />
@@ -108,15 +109,15 @@
 
             <TextView
                 android:id="@+id/textView32"
-                android:layout_width="wrap_content"
+                android:layout_width="237dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Duración del embarazo"
-                android:textColor="@color/text" />
+                android:text="Duración del embarazo:"
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/editTexDduracion_c"
-                android:layout_width="wrap_content"
+                android:layout_width="135dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
@@ -130,11 +131,11 @@
 
             <TextView
                 android:id="@+id/textView33"
-                android:layout_width="wrap_content"
+                android:layout_width="237dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="El bebé se movía durante el embarazo"
-                android:textColor="@color/text" />
+                android:text="El bebé se movía durante el embarazo:"
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/editTextDMovia_c"
@@ -153,15 +154,15 @@
 
             <TextView
                 android:id="@+id/textView34"
-                android:layout_width="wrap_content"
+                android:layout_width="237dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Amenaza o intento de aborto"
-                android:textColor="@color/text" />
+                android:text="Amenaza o intento de aborto:"
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/editTextDAborto_c"
-                android:layout_width="197dp"
+                android:layout_width="135dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:orientation="horizontal" />
@@ -207,11 +208,12 @@
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Parto" />
+                android:text="Parto:"
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/editTextDparto_c"
-                android:layout_width="150dp"
+                android:layout_width="130dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
@@ -220,10 +222,10 @@
             <TextView
                 android:id="@+id/textView37"
                 android:layout_width="100dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="Incubadora"
-                android:textColor="@color/text" />
+                android:text="Incubadora:"
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/editTextincubadora_c"
@@ -241,15 +243,15 @@
 
             <TextView
                 android:id="@+id/textView38"
-                android:layout_width="100dp"
+                android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Llanto"
+                android:text="Llanto:"
                 android:textColor="@color/text" />
 
             <TextView
                 android:id="@+id/editTextDllanto_c"
-                android:layout_width="150dp"
+                android:layout_width="130dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
@@ -260,12 +262,12 @@
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Color"
-                android:textColor="@color/text" />
+                android:text="Color:"
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/editTextDcolor_c"
-                android:layout_width="155dp"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
@@ -279,15 +281,15 @@
 
             <TextView
                 android:id="@+id/textView40"
-                android:layout_width="wrap_content"
+                android:layout_width="90dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Transfuciones"
-                android:textColor="@color/text" />
+                android:text="Transfuciones:"
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/editTextDtransfuciones_c"
-                android:layout_width="wrap_content"
+                android:layout_width="280dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
@@ -302,15 +304,15 @@
 
             <TextView
                 android:id="@+id/textView42"
-                android:layout_width="100dp"
+                android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Ictericia"
-                android:textColor="@color/text" />
+                android:text="Ictericia:"
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/editTextDictericia_c"
-                android:layout_width="137dp"
+                android:layout_width="130dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
@@ -321,12 +323,12 @@
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Apgar"
-                android:textColor="@color/text" />
+                android:text="Apgar:"
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/editTextDapgar_c"
-                android:layout_width="wrap_content"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
@@ -343,12 +345,12 @@
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Peso"
-                android:textColor="@color/text" />
+                android:text="Peso:"
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/editTextDpeso_c"
-                android:layout_width="170dp"
+                android:layout_width="130dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
@@ -356,15 +358,15 @@
 
             <TextView
                 android:id="@+id/textView45"
-                android:layout_width="80dp"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Talla"
-                android:textColor="@color/text" />
+                android:text="Talla:"
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/editTextDtalla_c"
-                android:layout_width="wrap_content"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
@@ -378,15 +380,15 @@
 
             <TextView
                 android:id="@+id/textView46"
-                android:layout_width="wrap_content"
+                android:layout_width="90dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Fórceps"
-                android:textColor="@color/text" />
+                android:text="Fórceps:"
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/editTextDforceps_c"
-                android:layout_width="wrap_content"
+                android:layout_width="280dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"

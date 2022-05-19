@@ -10,11 +10,11 @@
 
     <TextView
         android:id="@+id/textView53"
-        android:layout_width="173dp"
+        android:layout_width="match_parent"
         android:layout_height="38dp"
         android:layout_marginTop="64dp"
         android:gravity="center"
-        android:text="Historia escolar"
+        android:text="Consultar Historia Escolar"
         android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -39,15 +39,15 @@
 
             <TextView
                 android:id="@+id/textView54"
-                android:layout_width="wrap_content"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Asistió a guardería"
-                android:textColor="@color/text" />
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/editTextHEguarderiar_c"
-                android:layout_width="wrap_content"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
@@ -64,14 +64,16 @@
                 android:id="@+id/textView55"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="Presentó angustia por separación"
-                android:textColor="@color/text" />
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/editTextHEangustia_c"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
+                android:gravity="center"
                 android:inputType="textPersonName" />
         </LinearLayout>
 
@@ -82,11 +84,11 @@
 
             <TextView
                 android:id="@+id/textView56"
-                android:layout_width="wrap_content"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Edad en la que inició el kinder"
-                android:textColor="@color/text" />
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/editTextHEkinder_c"
@@ -105,11 +107,11 @@
 
             <TextView
                 android:id="@+id/textView57"
-                android:layout_width="wrap_content"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Edad en la que inició la primaria"
-                android:textColor="@color/text" />
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/editTextHEprimaria_c"
@@ -130,8 +132,9 @@
                 android:id="@+id/textView58"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="Opinión de la escuela acerca del niño"
-                android:textColor="@color/text" />
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/editTextTextHEopinionesc_c"
@@ -150,8 +153,9 @@
                 android:id="@+id/textView59"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="Cómo es su conducta escolar"
-                android:textColor="@color/text" />
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/editTextHEconducta_c"
@@ -171,8 +175,9 @@
                 android:id="@+id/textView60"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="Cambios de escuela (motivos)"
-                android:textColor="@color/text" />
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/editTextHEcambiosesc_c"
@@ -191,8 +196,9 @@
                 android:id="@+id/textView61"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="Rendimiento académico"
-                android:textColor="@color/text" />
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/editTextHErendimiento_c"

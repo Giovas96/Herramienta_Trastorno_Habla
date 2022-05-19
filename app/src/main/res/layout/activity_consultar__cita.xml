@@ -42,14 +42,15 @@
 
             <TextView
                 android:id="@+id/textView"
-                android:layout_width="wrap_content"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Fecha de cita" />
+                android:text="Fecha de cita:"
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/editTextfecha_cita_c"
-                android:layout_width="wrap_content"
+                android:layout_width="265dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
@@ -68,9 +69,10 @@
 
             <TextView
                 android:id="@+id/textView4"
-                android:layout_width="137dp"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:text="Hora de cita" />
+                android:text="Hora de cita:"
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/editTexthora_cita_c"
@@ -92,14 +94,15 @@
 
             <TextView
                 android:id="@+id/textView10"
-                android:layout_width="wrap_content"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Duración" />
+                android:text="Duración:"
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/editTextduracion_cita_c"
-                android:layout_width="wrap_content"
+                android:layout_width="265dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
@@ -119,14 +122,15 @@
 
             <TextView
                 android:id="@+id/textView109"
-                android:layout_width="136dp"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Motivo" />
+                android:text="Motivo:"
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/spinner_cita_c"
-                android:layout_width="wrap_content"
+                android:layout_width="265dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1" />
         </LinearLayout>
@@ -146,7 +150,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Observaciones" />
+                android:text="Observaciones"
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/editTextobservacion_cita_c"

@@ -60,7 +60,10 @@ public class SesionTerapeuta extends AppCompatActivity {
                 Toast.makeText(this, "Editar", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.menu_cerrar:
-                Toast.makeText(this, "Cerrar", Toast.LENGTH_SHORT).show();
+                mAuth.signOut();
+                Toast.makeText(this, "Ha cerrado sesión exitosamente", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(SesionTerapeuta.this, MainActivity.class));
+
                 break;
         }
         return super.onOptionsItemSelected(item);

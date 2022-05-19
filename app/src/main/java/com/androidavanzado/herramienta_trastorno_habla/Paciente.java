@@ -43,14 +43,15 @@ public class Paciente extends AppCompatActivity {
                     //click en Datos
 
                     //Declarar las vistas
-                    Button bconsultar, beditar;
+                    Button bconsultar, beditar, beliminar;
                     //Realizar conexion con la vista
                     dialog.setContentView(R.layout.dialogo_datos_paciente);
 
                     //inicializar las vistas
                     bconsultar= dialog.findViewById(R.id.Consultar);
                     beditar= dialog.findViewById(R.id.Editar);
-
+                    beliminar= dialog.findViewById(R.id.Eliminar);
+                    beliminar.setVisibility(View.GONE);
                     bconsultar.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {

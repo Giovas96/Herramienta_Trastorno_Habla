@@ -40,15 +40,15 @@
 
             <TextView
                 android:id="@+id/textView3"
-                android:layout_width="10dp"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Fecha:"
-                android:textColor="@color/text" />
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/editTextDGfecha_c"
-                android:layout_width="235dp"
+                android:layout_width="255dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
@@ -68,7 +68,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="Nombre del entrevistado"
-                android:textColor="@color/text" />
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/editTextDGentrevistado_c"
@@ -91,7 +91,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="Relación con el paciente"
-                android:textColor="@color/text" />
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/editTextDGrelacion_c"
@@ -114,7 +114,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="Referido por"
-                android:textColor="@color/text" />
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/editTextDGreferido_c"
@@ -130,7 +130,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="Nombre del paciente"
-                android:textColor="@color/text" />
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/editTextDGpaciente_c"
@@ -146,7 +146,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="Lugar de nacimiento"
-                android:textColor="@color/text" />
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/editTextDGnacimiento_c"
@@ -164,15 +164,15 @@
 
             <TextView
                 android:id="@+id/textView28"
-                android:layout_width="wrap_content"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Fecha de nacimiento:"
-                android:textColor="@color/text" />
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/editTextDGfechanac_c"
-                android:layout_width="wrap_content"
+                android:layout_width="255dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"

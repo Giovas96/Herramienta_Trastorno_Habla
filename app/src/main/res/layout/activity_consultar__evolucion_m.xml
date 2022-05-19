@@ -35,7 +35,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
@@ -52,14 +52,16 @@
                 android:id="@+id/textView81"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="A qué edad sostuvo la cabeza"
-                android:textColor="@color/text" />
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/editTextEMcabeza_c"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
+                android:gravity="center"
                 android:inputType="textPersonName" />
         </LinearLayout>
 
@@ -70,15 +72,15 @@
 
             <TextView
                 android:id="@+id/textView82"
-                android:layout_width="wrap_content"
+                android:layout_width="125dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Se sentó sin apoyo"
-                android:textColor="@color/text" />
+                android:text="Se sentó sin apoyo:"
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/editTextEMsento_c"
-                android:layout_width="wrap_content"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
@@ -92,15 +94,15 @@
 
             <TextView
                 android:id="@+id/textView87"
-                android:layout_width="wrap_content"
+                android:layout_width="125dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Se paró por si mismo"
-                android:textColor="@color/text" />
+                android:text="Se paró por si mismo:"
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/editTextEMparo_c"
-                android:layout_width="wrap_content"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
@@ -114,11 +116,11 @@
 
             <TextView
                 android:id="@+id/textView90"
-                android:layout_width="wrap_content"
+                android:layout_width="10dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Gateó"
-                android:textColor="@color/text" />
+                android:text="Gateó:"
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/editTextEMgateo_c"
@@ -130,15 +132,15 @@
 
             <TextView
                 android:id="@+id/textView91"
-                android:layout_width="wrap_content"
+                android:layout_width="30dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="a qué edad"
-                android:textColor="@color/text" />
+                android:text="a qué edad:"
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/editTextEMgateoedad_c"
-                android:layout_width="50dp"
+                android:layout_width="55dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
@@ -153,15 +155,15 @@
 
             <TextView
                 android:id="@+id/textView92"
-                android:layout_width="wrap_content"
+                android:layout_width="125dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Durante cuánto tiempo"
-                android:textColor="@color/text" />
+                android:text="Durante cuánto tiempo:"
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/editTextEMtiempogateo_c"
-                android:layout_width="wrap_content"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
@@ -175,15 +177,15 @@
 
             <TextView
                 android:id="@+id/textView93"
-                android:layout_width="wrap_content"
+                android:layout_width="125dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Caminó"
-                android:textColor="@color/text" />
+                android:text="Caminó:"
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/editTextEMcamino_c"
-                android:layout_width="wrap_content"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
@@ -197,15 +199,15 @@
 
             <TextView
                 android:id="@+id/textView94"
-                android:layout_width="wrap_content"
+                android:layout_width="125dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Chocaba con los objetos"
-                android:textColor="@color/text" />
+                android:text="Chocaba con los objetos:"
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/editTextEMchocar_c"
-                android:layout_width="wrap_content"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
@@ -216,8 +218,9 @@
             android:id="@+id/textView95"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Control de esfinteres:"
-            android:textColor="@color/text" />
+            android:gravity="center"
+            android:text="Control de esfinteres"
+            android:textColor="@color/black" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -226,15 +229,15 @@
 
             <TextView
                 android:id="@+id/textView96"
-                android:layout_width="wrap_content"
+                android:layout_width="10dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Diurno"
+                android:text="Diurno:"
                 android:textColor="@color/text" />
 
             <TextView
                 android:id="@+id/editTextEMdiurno_c"
-                android:layout_width="100dp"
+                android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
@@ -242,15 +245,15 @@
 
             <TextView
                 android:id="@+id/textView97"
-                android:layout_width="wrap_content"
+                android:layout_width="30dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Nocturno"
+                android:text="Nocturno:"
                 android:textColor="@color/text" />
 
             <TextView
                 android:id="@+id/editTextEMnocturno_c"
-                android:layout_width="100dp"
+                android:layout_width="55dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
@@ -264,15 +267,15 @@
 
             <TextView
                 android:id="@+id/textView98"
-                android:layout_width="wrap_content"
+                android:layout_width="125dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Mano y pie de preferencia"
+                android:text="Mano y pie de preferencia:"
                 android:textColor="@color/text" />
 
             <TextView
                 android:id="@+id/editTextEMmanopieref_c"
-                android:layout_width="100dp"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"

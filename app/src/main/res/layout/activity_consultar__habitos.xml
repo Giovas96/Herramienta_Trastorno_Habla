@@ -10,11 +10,11 @@
 
     <TextView
         android:id="@+id/textView30"
-        android:layout_width="107dp"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="88dp"
         android:gravity="center"
-        android:text="Hábitos"
+        android:text="Consultar Hábitos"
         android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -50,6 +50,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
+                android:gravity="center"
                 android:inputType="textPersonName" />
 
             <TextView
@@ -65,6 +66,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
+                android:gravity="center"
                 android:inputType="textPersonName" />
         </LinearLayout>
 
@@ -75,10 +77,10 @@
 
             <TextView
                 android:id="@+id/textView48"
-                android:layout_width="wrap_content"
+                android:layout_width="60dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Usó chupón"
+                android:text="Usó chupón:"
                 android:textColor="@color/text" />
 
             <TextView
@@ -97,10 +99,10 @@
 
             <TextView
                 android:id="@+id/textView49"
-                android:layout_width="wrap_content"
+                android:layout_width="60dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Se chupa el dedo"
+                android:text="Se chupa el dedo:"
                 android:textColor="@color/text" />
 
             <TextView
@@ -130,6 +132,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
+                android:gravity="center"
                 android:inputType="textPersonName" />
 
             <TextView
@@ -145,6 +148,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
+                android:gravity="center"
                 android:inputType="textPersonName" />
 
             <TextView
@@ -160,6 +164,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
+                android:gravity="center"
                 android:inputType="textPersonName" />
         </LinearLayout>
     </LinearLayout>

@@ -28,7 +28,7 @@
     <string name="Nombre_paci">Nombre(s):</string>
     <string name="Apellido_P">Apellido Paterno:</string>
     <string name="Apellido_M">Apellido Materno:</string>
-    <string name="Fecha_nac">Fecha de nacimiento (DD/MM/AAAA):</string>
+    <string name="Fecha_nac">Fecha de nacimiento:</string>
     <string name="Lugar">Lugar en la familia:</string>
     <string name="Direccion_paci">Dirección:</string>
     <string name="Telefono_paci">Teléfono:</string>

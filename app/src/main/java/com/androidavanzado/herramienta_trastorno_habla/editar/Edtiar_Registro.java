@@ -62,7 +62,7 @@ public class Edtiar_Registro extends AppCompatActivity {
                     DocumentSnapshot document = task.getResult();
                     if (document.exists()) {
 
-                        String nom= document.getString("Nombre()s");
+                        String nom= document.getString("Nombre");
                         String app= document.getString("Apellido Paterno");
                         String apm= document.getString("Apellido Materno");
                         String tit= document.getString("Titulo");

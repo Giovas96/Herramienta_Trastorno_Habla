@@ -1,11 +1,13 @@
 package com.androidavanzado.herramienta_trastorno_habla;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -27,7 +29,10 @@ import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.Query;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
 
 public class Listarcitas extends AppCompatActivity {
     RecyclerView listaviewcita;
@@ -35,10 +40,11 @@ public class Listarcitas extends AppCompatActivity {
     FirebaseAuth mAuth;
     String idp, idpaciente;
     CollectionReference pacientereference;
+    DocumentReference citaeleminada;
     Dialog dialog;
     LinearLayoutManager linearLayoutManager;
     FirestoreRecyclerAdapter<Citas, ViewHolder_listacita> firestoreRecyclerAdapter;
-    Button agregar,bconsultar, beditar;
+    Button beliminar,bconsultar, beditar;
     FirestoreRecyclerOptions<Citas> options;
 
     @Override
@@ -57,7 +63,7 @@ public class Listarcitas extends AppCompatActivity {
         listaviewcita.setHasFixedSize(true);
         Listarcitas();
         dialog = new Dialog(Listarcitas.this);
-        dialog.setContentView(R.layout.dialogo_historial);
+        dialog.setContentView(R.layout.dialogo_datos_paciente);
 
 
 
@@ -65,7 +71,7 @@ public class Listarcitas extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(Listarcitas.this, Paciente.class);
-                i.putExtra("idpa",idpaciente);
+                i.putExtra("idpac",idpaciente);
                 startActivity(i);
             }
         });
@@ -109,11 +115,12 @@ public class Listarcitas extends AppCompatActivity {
                         Toast.makeText(Listarcitas.this, "Accediste exitosamente a las citas ", Toast.LENGTH_SHORT).show();
 
                         //inicializar las vistas
-                        agregar=dialog.findViewById(R.id.AgregarH);
-                        bconsultar= dialog.findViewById(R.id.ConsultarH);
-                        beditar= dialog.findViewById(R.id.EditarH);
 
-                        agregar.setVisibility(View.GONE);
+                        bconsultar= dialog.findViewById(R.id.Consultar);
+                        beditar= dialog.findViewById(R.id.Editar);
+                        beliminar= dialog.findViewById(R.id.Eliminar);
+
+
                         bconsultar.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
@@ -133,6 +140,13 @@ public class Listarcitas extends AppCompatActivity {
                                 j.putExtra("idpac",myId);
                                 startActivity(j);
                                 Toast.makeText(Listarcitas.this, "Click en editar", Toast.LENGTH_SHORT).show();
+                            }
+                        });
+
+                        beliminar.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                            EliminarCita(myId);
                             }
                         });
                         dialog.show();
@@ -156,6 +170,31 @@ public class Listarcitas extends AppCompatActivity {
 
         listaviewcita.setLayoutManager(linearLayoutManager);
         listaviewcita.setAdapter(firestoreRecyclerAdapter);
+    }
+
+    private void EliminarCita(String myId) {
+        String idcita= myId;
+        AlertDialog.Builder builder = new AlertDialog.Builder(Listarcitas.this);
+        builder.setTitle("Eliminar Cita");
+        builder.setMessage("¿Desea eliminar la cita?");
+        builder.setPositiveButton("Sí", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                //Eliminar cita de la BD
+                citaeleminada=pacientereference.document(idcita);
+                citaeleminada.delete();
+                Toast.makeText(Listarcitas.this, "Cita eliminada", Toast.LENGTH_SHORT).show();
+
+
+            }
+        });
+        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Toast.makeText(Listarcitas.this, "Cita no eliminada", Toast.LENGTH_SHORT).show();
+            }
+        });
+        builder.create().show();
     }
 
     @Override

@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 
@@ -28,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     EditText correo, contrasena;
     Button btnregister;
     Button btnlogin;
+    TextView  btnolvidar;
 
 
 
@@ -39,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         contrasena = findViewById(R.id.Contrasena_inicio);
         btnregister = findViewById(R.id.btn_registro);
         btnlogin = findViewById(R.id.btn_inicio);
-
+        btnolvidar=findViewById(R.id.olvidar);
         mAuth=FirebaseAuth.getInstance();
 
 
@@ -63,6 +65,15 @@ public class MainActivity extends AppCompatActivity {
                     login(email, pass);
                 }
 
+            }
+        });
+
+        btnolvidar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent o = new Intent(MainActivity.this, Restablecer.class);
+                startActivity(o);
+                finish();
             }
         });
 

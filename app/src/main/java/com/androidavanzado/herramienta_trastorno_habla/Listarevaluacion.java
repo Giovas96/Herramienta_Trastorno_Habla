@@ -63,9 +63,9 @@ public class Listarevaluacion extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(Listarevaluacion.this, Paciente.class);
-                i.putExtra("idpa", idpaciente);
-                startActivity(i);
+                Intent k = new Intent(Listarevaluacion.this, Paciente.class);
+                k.putExtra("idpac", idpaciente);
+                startActivity(k);
             }
         });
         add.setOnClickListener(new View.OnClickListener() {

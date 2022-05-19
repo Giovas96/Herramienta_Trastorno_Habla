@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Herramienta_Trastorno_Habla">
-        <activity android:name=".editar.Edtiar_Registro"></activity>
+        <activity android:name=".Restablecer"></activity>
+        <activity android:name=".editar.Edtiar_Registro" />
         <activity android:name=".Listarevaluacion" />
         <activity android:name=".editar.Editar_Evaluacion" />
         <activity android:name=".consultas.Consultar_Evaluacion" />
