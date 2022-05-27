@@ -37,13 +37,9 @@ public class RegistroPaciente extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro_paciente);
         Inicializarpaciente();
-
-
         mAuth=FirebaseAuth.getInstance();
         terapeuta= FirebaseFirestore.getInstance();
-
         idprincipal = mAuth.getCurrentUser().getUid();
-
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,37 +59,25 @@ public class RegistroPaciente extends AppCompatActivity {
                 String direccion = Direccion.getText().toString();
                 String telefono = Telefono.getText().toString();
                 String escuela = Escuela.getText().toString();
-
-
                 if (!nombre.isEmpty() && !apellidop.isEmpty() && !apellidom.isEmpty() && !fecha.isEmpty() && !lugar.isEmpty() &&
                         !direccion.isEmpty() && !telefono.isEmpty() && !escuela.isEmpty()){
-
-
                     Pacientes paciente= new Pacientes(nombre, apellidop, apellidom, fecha, lugar, direccion, telefono, escuela);
                     DocumentReference documentReference = terapeuta.collection("terapeutas").document(idprincipal);
                     documentReference.collection("paciente").add(paciente).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                         @Override
                         public void onSuccess(DocumentReference documentReference) {
                             Toast.makeText(RegistroPaciente.this, "Registro exitoso", Toast.LENGTH_SHORT).show();
-
                             String idpaciente= documentReference.getId();
-
                             Intent i = new Intent(RegistroPaciente.this, RegistroTutor.class);
                             i.putExtra("Pid",idpaciente);
                             startActivity(i);
-
                         }
                     })
                             .addOnFailureListener(new OnFailureListener() {
                                 @Override
                                 public void onFailure( Exception e) {
-
                                 }
                             });
-
-
-
-
                 } else{
                     Toast.makeText(RegistroPaciente.this, "Llena todos los campos", Toast.LENGTH_SHORT).show();
                 }

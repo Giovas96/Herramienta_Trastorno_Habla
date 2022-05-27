@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nota_tera"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="6dp">
+            <ImageView
+                android:id="@+id/Imagenotas"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp"
+                app:srcCompat="@drawable/item_nota"
+                android:layout_alignParentLeft="true"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="2dp"
+                android:layout_toEndOf="@+id/Imagenotas"
+                android:orientation="vertical"
+                android:layout_marginLeft="4dp"
+                android:layout_toRightOf="@+id/Imagenotas">
+                <TextView
+                    android:id="@+id/titulolistarnota"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:text="Titulo"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/fechalistarnota"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Fecha de nota"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/asuntonota"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Asunto"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+
+                <TextView
+                    android:id="@+id/resumennota"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text="Resumen"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"/>
+                <TextView
+                    android:id="@+id/descripcionnota"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Observacion"
+                    android:visibility="gone"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"/>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

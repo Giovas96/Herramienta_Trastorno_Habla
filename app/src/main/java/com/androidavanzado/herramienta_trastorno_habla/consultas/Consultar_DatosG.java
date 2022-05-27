@@ -43,8 +43,8 @@ public class Consultar_DatosG extends AppCompatActivity {
         nFirestore = FirebaseFirestore.getInstance();
         idprincipal = mAuth.getCurrentUser().getUid();
 
-        cdatos = nFirestore.collection("terapeutas").document(idprincipal).collection("paciente").document(idpaciente).collection("datos").document("DatosGenerales");
-
+        cdatos = nFirestore.collection("terapeutas").document(idprincipal).collection("paciente").document(idpaciente)
+                .collection("datos").document("DatosGenerales");
 
 
         cdatos.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {

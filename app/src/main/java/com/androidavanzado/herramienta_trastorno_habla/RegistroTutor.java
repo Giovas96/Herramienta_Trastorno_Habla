@@ -39,11 +39,8 @@ public class RegistroTutor extends AppCompatActivity {
         Inicializarpaciente();
         mAuth=FirebaseAuth.getInstance();
         terapeuta= FirebaseFirestore.getInstance();
-        //FirebaseUser user= mAuth.getCurrentUser();
         idprincipal = mAuth.getCurrentUser().getUid();
-       // idpaciente = terapeuta.collection("terapeutas").document(idprincipal).collection("paciente").document();
         DocumentReference documentpaciente = terapeuta.collection("terapeutas").document(idprincipal).collection("paciente").document(idpaciente);
-
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -140,9 +137,9 @@ public class RegistroTutor extends AppCompatActivity {
                 String celtd= celulard.getText().toString();
                 String casatd = casad.getText().toString();
                 String proftd= profesiond.getText().toString();
-
                 if (!nombret.isEmpty() && !apellidopt.isEmpty() && !apellidomt.isEmpty() && !fechanact.isEmpty() && !celt.isEmpty() &&
                         !casat.isEmpty() && !proft.isEmpty()){
+
                     Map<String, Object> map = new HashMap<>();
                     map.put("Nombre()s", nombret);
                     map.put("Apellido Paterno", apellidopt);
@@ -153,9 +150,7 @@ public class RegistroTutor extends AppCompatActivity {
                     map.put("Profesión", proft);
 
                     documentpaciente.collection("datos").document("tutorp").set(map);
-
                     Toast.makeText(RegistroTutor.this, "Registro exitoso de un tutor", Toast.LENGTH_SHORT).show();
-
                   if (!nombretd.isEmpty() && !apellidoptd.isEmpty() && !apellidomtd.isEmpty() && !fechanactd.isEmpty() && !celtd.isEmpty() &&
                             !casatd.isEmpty() && !proftd.isEmpty()){
 
@@ -171,17 +166,11 @@ public class RegistroTutor extends AppCompatActivity {
                       documentpaciente.collection("datos").document("tutorpd").set(mapd);
                       Toast.makeText(RegistroTutor.this, "Registro exitoso de ambos tutores", Toast.LENGTH_SHORT).show();
                     }
-
                     Intent i = new Intent(RegistroTutor.this, Listarpacientes.class);
-                   // i.putExtra("Pid",idpaciente);
                     startActivity(i);
-
                 }else{
                     Toast.makeText(RegistroTutor.this, "Registro no exitoso", Toast.LENGTH_SHORT).show();
-
                 }
-
-
             }
         });
 

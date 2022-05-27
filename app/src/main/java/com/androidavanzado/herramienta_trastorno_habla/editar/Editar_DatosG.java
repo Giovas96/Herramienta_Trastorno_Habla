@@ -50,8 +50,6 @@ public class Editar_DatosG extends AppCompatActivity {
 
         document= nFirestore.collection("terapeutas").document(idprincipal).collection("paciente").document(idpaciente);
         datos=document.collection("datos").document("DatosGenerales");
-
-
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

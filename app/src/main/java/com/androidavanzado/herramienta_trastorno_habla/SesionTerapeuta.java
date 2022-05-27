@@ -19,6 +19,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.androidavanzado.herramienta_trastorno_habla.editar.Edtiar_Registro;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.CollectionReference;
@@ -34,8 +36,8 @@ public class SesionTerapeuta extends AppCompatActivity {
 
     Toolbar toolbar;
     private ListView menu_terapeuta;
-    String opciones []={"Listar Pacientes", "Listar Actividades", "Calendario", "Información" };
-    int iconos [] = {R.drawable.pacientes,R.drawable.juegos, R.drawable.calendario, R.drawable.info};
+    String opciones []={"Listar Pacientes", "Listar Actividades", "Listar Notas", "Información" };
+    int iconos [] = {R.drawable.pacientes,R.drawable.juegos, R.drawable.notas, R.drawable.info};
 
     FirebaseAuth mAuth;
     FirebaseFirestore terapeuta;
@@ -86,19 +88,31 @@ public class SesionTerapeuta extends AppCompatActivity {
 
         //Obtener datos del correo  y ID
         DocumentReference documentReference = terapeuta.collection("terapeutas").document(idprincipal);
-        documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
+        documentReference.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
-            public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException e) {
-                correovista.setText(documentSnapshot.getString("Correo electronico"));
-                iduser.setText(documentSnapshot.getString("id"));
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                if (task.isSuccessful()) {
+                    DocumentSnapshot document = task.getResult();
+                    if (document.exists()) {
+
+
+                        String corr= document.getString("Correo electronico");
+                        String contr= document.getString("id");
+                        correovista.setText(corr);
+                        iduser.setText(contr);
+
+                    } else {
+                        //Log.d(TAG, "No such document");
+                    }
+                } else {
+                    //Log.d(TAG, "get failed with ", task.getException());
+                }
             }
         });
 
+
         //Menu Terapeuta
         menu_terapeuta= findViewById(R.id.menu_terapeuta);
-
-
-        //ArrayAdapter <String> adapter= new ArrayAdapter<String>(SesionTerapeuta.this, android.R.layout.simple_list_item_1, opciones);
         MyAdapter adapter= new MyAdapter(SesionTerapeuta.this, R.layout.list_item, opciones, iconos);
         menu_terapeuta.setAdapter(adapter);
         menu_terapeuta.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -114,7 +128,9 @@ public class SesionTerapeuta extends AppCompatActivity {
                     //click en Listar Actividades
 
                 } else if (position ==2){
-                    //Click en Calendario
+                    //Click en Listar Notas
+                    Intent intent= new Intent(SesionTerapeuta.this, Listar_notas.class);
+                    startActivity(intent);
 
                 } else if (position ==3){
                     //Click en Informacion
@@ -124,9 +140,5 @@ public class SesionTerapeuta extends AppCompatActivity {
         });
 
     }
-
-    private void CargarDatos(){
-
-    }
-
+    
 }

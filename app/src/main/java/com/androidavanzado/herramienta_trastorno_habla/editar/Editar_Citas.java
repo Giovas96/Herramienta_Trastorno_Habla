@@ -4,8 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
+import android.content.ContentUris;
 import android.content.Intent;
+import android.database.Cursor;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.CalendarContract;
 import android.text.format.DateFormat;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -42,7 +46,7 @@ public class Editar_Citas extends AppCompatActivity {
     FirebaseFirestore nFirestore;
     ImageView back, save;
     int dia, mes, anio,horas,minutos;
-    DocumentReference document;
+    DocumentReference document, nombre;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,7 +60,7 @@ public class Editar_Citas extends AppCompatActivity {
         idprincipal = mAuth.getCurrentUser().getUid();
 
         document= nFirestore.collection("terapeutas").document(idprincipal).collection("paciente").document(idpaciente).collection("citas").document(myid);
-
+        nombre=nFirestore.collection("terapeutas").document(idprincipal).collection("paciente").document(idpaciente);
 
         String [] motivos={"Avance","Entrevista","Evaluación","Terapia"};
         ArrayAdapter<String> adapter=new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item,motivos);
@@ -176,9 +180,62 @@ public class Editar_Citas extends AppCompatActivity {
                 Citas cit= new Citas(nomb, hr,dur,spin,obs);
                 document.set(cit);
 
-                Intent i = new Intent(Editar_Citas.this, Consultar_Cita.class);
-                i.putExtra("idp",idpaciente);
-                startActivity(i);
+
+                nombre.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                    @Override
+                    public void onSuccess(DocumentSnapshot documentSnapshot) {
+                        Pacientes paciente=documentSnapshot.toObject(Pacientes.class);
+                        String nombrepaciente=paciente.getNombre();
+                        String apppaciente=paciente.getApellidopat();
+                        String apmpaciente=paciente.getApellidomat();
+
+                        Uri eventUri;
+                        if (android.os.Build.VERSION.SDK_INT <= 7) {
+                            // the old way
+
+                            eventUri = Uri.parse("content://calendar/events");
+                        } else {
+                            // the new way
+
+                            eventUri = Uri.parse("content://com.android.calendar/events");
+                        }
+                        int result = 0;
+                        String projection[] = { "_id", "title" };
+                        Cursor cursor = getContentResolver().query(eventUri, null, null, null, null);
+
+                        if (cursor.moveToFirst()) {
+
+                            String calName;
+                            String calID;
+
+                            int nameCol = cursor.getColumnIndex(projection[1]);
+                            int idCol = cursor.getColumnIndex(projection[0]);
+                            do {
+                                calName = cursor.getString(nameCol);
+                                calID = cursor.getString(idCol);
+
+                                if (calName != null && calName.contains(nombrepaciente+ " " + apppaciente+" "+apmpaciente+"("+ spin+")")) {
+                                    result = Integer.parseInt(calID);
+                                }
+
+                            } while (cursor.moveToNext());
+                            cursor.close();
+                        }
+
+
+                        Uri uri = ContentUris.withAppendedId(CalendarContract.Events.CONTENT_URI, result);
+                        Intent intent = new Intent(Intent.ACTION_VIEW)
+                                .setData(uri);
+                        startActivity(intent);
+
+                        Intent i = new Intent(Editar_Citas.this, Consultar_Cita.class);
+                        i.putExtra("idp",idpaciente);
+                        startActivity(i);
+
+
+
+                    }
+                });
 
             }
         });

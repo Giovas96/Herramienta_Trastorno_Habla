@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -31,6 +32,7 @@ public class RegistrarseActivity extends AppCompatActivity {
     Button btnregister;
     EditText nombre, apellidop, apellidom, titulo, especialidad, direccion, cedula, telefono, correo, contrasena;
     FirebaseFirestore nFirestore;
+    CheckBox terminos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,14 +51,15 @@ public class RegistrarseActivity extends AppCompatActivity {
         correo = findViewById(R.id.text_correot);
         contrasena = findViewById(R.id.text_contrasena);
         btnregister = findViewById(R.id.btn_registrarse);
+        terminos= findViewById(R.id.Terminos_condiciones);
+
 
         btnregister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                registerUser();
-                Intent i = new Intent(RegistrarseActivity.this, SesionTerapeuta.class);
-                startActivity(i);
+                    registerUser();
+                    Intent i = new Intent(RegistrarseActivity.this, MainActivity.class);
+                    startActivity(i);
             }
         });
 
@@ -79,8 +82,12 @@ public class RegistrarseActivity extends AppCompatActivity {
             if (isEmailValid(correuser)) {
 
                 if (contruser.length() >= 8) {
+                    if(terminos.isChecked()==true){
                     creatUser(nameuser, appuser, apmuser, tituser, espuser, direcuser, ceduser, teluser, correuser, contruser);
-                } else {
+                    }else{
+                        Toast.makeText(RegistrarseActivity.this, "Por favor acepta los terminos y condiciones", Toast.LENGTH_SHORT).show();
+                    }
+                    } else {
                     Toast.makeText(RegistrarseActivity.this, "Completaste los datos con un email invalido", Toast.LENGTH_SHORT).show();
                 }
             } else {

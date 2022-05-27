@@ -115,6 +115,8 @@ public class Editar_Evaluacion extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent b= new Intent(Editar_Evaluacion.this, Listarevaluacion.class);
+                b.putExtra("idpa",idpaciente);
+                startActivity(b);
             }
         });
 

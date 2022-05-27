@@ -10,13 +10,14 @@
 
     <TextView
         android:id="@+id/textView105"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="65dp"
+        android:gravity="center"
         android:text="Historial Médico"
         android:textColor="@color/black"
+        android:textSize="30sp"
         android:textStyle="bold"
-        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,7 +27,7 @@
         android:id="@+id/linearLayout2"
         android:layout_width="390dp"
         android:layout_height="549dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="16dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.476"
@@ -40,10 +41,11 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/button16"
+        android:id="@+id/descargarhistorial"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Descargar"
+        app:icon="@drawable/ic_baseline_picture_as_pdf_24"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_general"
+    tools:context=".editar.Editar_nota">
+
+    <include layout="@layout/toolbar_editarnot" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:layout_marginTop="64dp"
+        android:gravity="center"
+        android:text="Nota"
+        android:textColor="@color/black"
+        android:textSize="28dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Titulo" />
+
+            <EditText
+                android:id="@+id/editTextTituloN_e"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textLongMessage|textAutoCorrect|time" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView111"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="137dp"
+                android:layout_height="wrap_content"
+                android:text="Fecha" />
+
+            <TextView
+                android:id="@+id/editTextfecha_nota_e"
+                android:layout_width="297dp"
+                android:layout_height="wrap_content"
+                android:ems="10" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView112"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Asunto" />
+
+            <EditText
+                android:id="@+id/editTextasunto_nota_e"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textLongMessage|textAutoCorrect|time" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView113"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView109"
+                android:layout_width="136dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Resumen" />
+
+            <EditText
+                android:id="@+id/editTextresumen_nota_e"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textLongMessage|textAutoCorrect|time" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView114"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="153dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView110"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="Descripción" />
+
+            <EditText
+                android:id="@+id/editTextodescripcion_nota_e"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:layout_weight="1"
+                android:ems="50"
+                android:gravity="start|top"
+                android:inputType="textMultiLine"
+                android:minHeight="158dp" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,6 +3,7 @@ package com.androidavanzado.herramienta_trastorno_habla;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -10,6 +11,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -30,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
     Button btnregister;
     Button btnlogin;
     TextView  btnolvidar;
+    Dialog dialog;
+    ImageView clo;
 
 
 
@@ -43,6 +47,13 @@ public class MainActivity extends AppCompatActivity {
         btnlogin = findViewById(R.id.btn_inicio);
         btnolvidar=findViewById(R.id.olvidar);
         mAuth=FirebaseAuth.getInstance();
+
+        dialog = new Dialog(MainActivity.this);
+        dialog.setContentView(R.layout.dialogo_informacion);
+
+        dialog.show();
+
+
 
 
         btnregister.setOnClickListener(new View.OnClickListener() {

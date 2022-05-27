@@ -87,8 +87,9 @@ public class Agregar_Evaluacion extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent b= new Intent(Agregar_Evaluacion.this,Listarevaluacion.class);
-                startActivity(b);
+                Intent c=new Intent(Agregar_Evaluacion.this, Listarevaluacion.class);
+                c.putExtra("idpa", idpaciente);
+                startActivity(c);
             }
         });
 
@@ -96,6 +97,9 @@ public class Agregar_Evaluacion extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 registrar();
+                Intent c=new Intent(Agregar_Evaluacion.this, Listarevaluacion.class);
+                c.putExtra("idpa", idpaciente);
+                startActivity(c);
             }
         });
     }
@@ -132,13 +136,8 @@ public class Agregar_Evaluacion extends AppCompatActivity {
         String obser = obs.getText().toString();
         String adquir =adq.getText().toString();
 
-
         Evaluacion evaluacion= new Evaluacion(fonema,inic,dire,inve,inter,trab,fin,grupr,grupl,grups,obser,adquir);
-
         aevaluacion.document(fonema).set(evaluacion);
         Toast.makeText(Agregar_Evaluacion.this, "Registro de la evaluación exitosa", Toast.LENGTH_SHORT).show();
-       /* Intent c=new Intent(Agregar_Evaluacion.this, ListarEvaluacion.class);
-        c.putExtra("idpa", idpaciente);
-        startActivity(c);*/
     }
 }

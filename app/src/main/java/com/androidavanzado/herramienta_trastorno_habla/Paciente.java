@@ -32,7 +32,6 @@ public class Paciente extends AppCompatActivity {
         idpaciente= getIntent().getStringExtra("idpac");
         menu_paciente= findViewById(R.id.menu_paciente);
         dialog = new Dialog(Paciente.this);
-        //ArrayAdapter <String> adapter= new ArrayAdapter<String>(SesionTerapeuta.this, android.R.layout.simple_list_item_1, opciones);
         MyAdapter adapter= new MyAdapter(Paciente.this, R.layout.list_item, opciones, iconos);
         menu_paciente.setAdapter(adapter);
         back= findViewById(R.id.back_pac);

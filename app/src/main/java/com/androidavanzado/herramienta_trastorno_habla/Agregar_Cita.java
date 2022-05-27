@@ -6,6 +6,7 @@ import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.CalendarContract;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.DatePicker;
@@ -16,10 +17,13 @@ import android.widget.TimePicker;
 import android.widget.Toast;
 
 import com.androidavanzado.herramienta_trastorno_habla.Objetos.Citas;
+import com.androidavanzado.herramienta_trastorno_habla.Objetos.Pacientes;
 import com.androidavanzado.herramienta_trastorno_habla.editar.Editar_Citas;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.Calendar;
@@ -31,8 +35,8 @@ public class Agregar_Cita extends AppCompatActivity {
     FirebaseAuth mAuth;
     FirebaseFirestore nFirestore;
     ImageView back, save;
-    int dia, mes, anio,horas,minutos;
-    DocumentReference document;
+    int dia, mes, anio,horas,minutos,dia1, mes1, anio1,hora1,minute1;
+    DocumentReference document,nombre;
     CollectionReference ecitas;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +50,7 @@ public class Agregar_Cita extends AppCompatActivity {
 
         document= nFirestore.collection("terapeutas").document(idprincipal).collection("paciente").document(idpaciente);
         ecitas=document.collection("citas");
+        nombre=nFirestore.collection("terapeutas").document(idprincipal).collection("paciente").document(idpaciente);
 
         String [] motivos={"Avance","Entrevista","Evaluación","Terapia"};
         ArrayAdapter<String> adapter=new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item,motivos);
@@ -58,6 +63,7 @@ public class Agregar_Cita extends AppCompatActivity {
                 dia = calendario.get(Calendar.DAY_OF_MONTH);
                 mes = calendario.get(Calendar.MONTH);
                 anio= calendario.get(Calendar.YEAR);
+
 
                 DatePickerDialog datePickerDialog= new DatePickerDialog(Agregar_Cita.this, new DatePickerDialog.OnDateSetListener() {
                     @Override
@@ -78,6 +84,9 @@ public class Agregar_Cita extends AppCompatActivity {
                         }else{
                             mesformateado= String.valueOf(Mes);
                         }
+                        anio1=Anioseleccionado;
+                         mes1=Messelecionado;
+                         dia1=Diaselecionado;
                         fecha.setText(diaformateado + '/' + mesformateado + '/' + Anioseleccionado);
                     }
                 }
@@ -121,6 +130,8 @@ public class Agregar_Cita extends AppCompatActivity {
 
 
                         }
+                         hora1=hourOfDay;
+                         minute1=minute;
                         hora.setText(time);
                     }
                 }
@@ -158,15 +169,38 @@ public class Agregar_Cita extends AppCompatActivity {
 
     public void registrar(){
         String fechas = fecha.getText().toString();
-        String horas= hora.getText().toString();
+        String horasr= hora.getText().toString();
         String duraciones = duracion.getText().toString();
         String motivos= spinner.getSelectedItem().toString();
         String observaciones = observacion.getText().toString();
 
-        Citas cita= new Citas(fechas,horas,duraciones, motivos,observaciones);
+        Citas cita= new Citas(fechas,horasr,duraciones, motivos,observaciones);
 
         ecitas.add(cita);
         Toast.makeText(Agregar_Cita.this, "Registro de la cita exitoso ", Toast.LENGTH_SHORT).show();
+
+        nombre.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+            @Override
+            public void onSuccess(DocumentSnapshot documentSnapshot) {
+                    Pacientes paciente=documentSnapshot.toObject(Pacientes.class);
+                    String nombrepaciente=paciente.getNombre();
+                    String apppaciente=paciente.getApellidopat();
+                    String apmpaciente=paciente.getApellidomat();
+                    Calendar inicio= Calendar.getInstance();
+                    inicio.set(Calendar.YEAR,anio1);
+                    inicio.set(Calendar.MONTH,mes1);
+                    inicio.set(Calendar.DAY_OF_MONTH,dia1);
+
+                    inicio.set(Calendar.HOUR_OF_DAY,hora1);
+                    inicio.set(Calendar.MINUTE, minute1);
+                    Intent intent= new Intent(Intent.ACTION_INSERT);
+                    intent.setData(CalendarContract.Events.CONTENT_URI);
+                    intent.putExtra(CalendarContract.Events.TITLE, nombrepaciente+ " " + apppaciente+" "+apmpaciente+"("+ motivos+")" );
+                    intent.putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME, inicio.getTimeInMillis());
+                    intent.putExtra(CalendarContract.Events.DESCRIPTION, duraciones + "\n"+ observaciones);
+                    startActivity(intent);
+            }
+        });
         Intent c=new Intent(Agregar_Cita.this, Listarcitas.class);
         c.putExtra("idpa", idpaciente);
         startActivity(c);

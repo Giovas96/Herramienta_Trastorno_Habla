@@ -2,6 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.androidavanzado.herramienta_trastorno_habla">
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,7 +14,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Herramienta_Trastorno_Habla">
-        <activity android:name=".Restablecer"></activity>
+        <activity android:name=".editar.Editar_nota"></activity>
+        <activity android:name=".consultas.Consultar_nota" />
+        <activity android:name=".Listar_notas" />
+        <activity android:name=".Agregar_nota" />
+        <activity android:name=".Restablecer" />
         <activity android:name=".editar.Edtiar_Registro" />
         <activity android:name=".Listarevaluacion" />
         <activity android:name=".editar.Editar_Evaluacion" />

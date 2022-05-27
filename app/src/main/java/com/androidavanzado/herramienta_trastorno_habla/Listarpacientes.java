@@ -3,6 +3,7 @@ package com.androidavanzado.herramienta_trastorno_habla;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -10,11 +11,13 @@ import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.InputType;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.SearchView;
 import android.widget.Toast;
 
 import com.androidavanzado.herramienta_trastorno_habla.Objetos.Pacientes;
@@ -29,6 +32,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
@@ -39,9 +43,10 @@ public class Listarpacientes extends AppCompatActivity {
     FirebaseAuth mAuth;
     String idp, idpac;
     CollectionReference pacientereference;
+    Query buscarnom;
     Dialog dialog;
     Button beliminar,bconsultar, beditar;
-
+    SearchView buscar;
     LinearLayoutManager linearLayoutManager;
     FirestoreRecyclerAdapter<Pacientes, ViewHolder_listapaciente> firestoreRecyclerAdapter;
 
@@ -58,19 +63,34 @@ public class Listarpacientes extends AppCompatActivity {
         dialog = new Dialog(Listarpacientes.this);
         dialog.setContentView(R.layout.dialogo_datos_paciente);
         idp =mAuth.getCurrentUser().getUid();
+        buscar= findViewById(R.id.buscar_paciente);
+
         //idpa= getIntent().getStringExtra("Pid");
 
         pacientereference = firebaseFirestore.collection("terapeutas").document(idp).collection("paciente");
 
        // idpaciente = pacientereference.get();
 
-
-
         listaviewpaciente= findViewById(R.id.listaviewpaciente);
         listaviewpaciente.setHasFixedSize(true);
 
         Listarpacientes();
 
+
+        buscar.setInputType(InputType.TYPE_TEXT_FLAG_CAP_WORDS);
+        buscar.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                Buscarpaciente(query);
+                return true;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                Buscarpaciente(newText);
+                return true;
+            }
+        });
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -89,7 +109,10 @@ public class Listarpacientes extends AppCompatActivity {
         });
     }
 
+
+
     private void Listarpacientes (){
+       // buscarnom = pacientereference.orderBy("nombre");
         options = new FirestoreRecyclerOptions.Builder<Pacientes>().setQuery(pacientereference, Pacientes.class).build();
 
         firestoreRecyclerAdapter = new FirestoreRecyclerAdapter<Pacientes, ViewHolder_listapaciente>(options) {
@@ -120,6 +143,84 @@ public class Listarpacientes extends AppCompatActivity {
                     public void onItemClick(View view, int position) {
 
                     String myId = firestoreRecyclerAdapter.getSnapshots().getSnapshot(position).getId();//recupera el ID del recycler correspondiente a firestore
+                        //inicializar las vistas
+                        bconsultar= dialog.findViewById(R.id.Consultar);
+                        beditar= dialog.findViewById(R.id.Editar);
+                        beliminar= dialog.findViewById(R.id.Eliminar);
+                        bconsultar.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                Intent intent= new Intent(Listarpacientes.this, Paciente.class);
+                                intent.putExtra("idpac",myId);
+                                startActivity(intent);
+                                Toast.makeText(Listarpacientes.this, "Accediste exitosamente al paciente ", Toast.LENGTH_SHORT).show();
+
+                            }
+                        });
+
+                        beditar.setVisibility(View.GONE);
+                        beliminar.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                EliminarPaciente(myId);
+                            }
+                        });
+                        dialog.show();
+
+                    }
+
+                    @Override
+                    public void onItemLongClick(View view, int position) {
+                        Toast.makeText(Listarpacientes.this, "Listo para el menu", Toast.LENGTH_SHORT).show();
+                    }
+                });
+                return viewHolder_listapaciente;
+            }
+        };
+
+        linearLayoutManager= new LinearLayoutManager(Listarpacientes.this,LinearLayoutManager.VERTICAL,false);
+        linearLayoutManager.setReverseLayout(true);
+        linearLayoutManager.setStackFromEnd(true);
+
+        listaviewpaciente.setLayoutManager(linearLayoutManager);
+        listaviewpaciente.setAdapter(firestoreRecyclerAdapter);
+       /* listaviewpaciente.setLayoutManager(new GridLayoutManager(Listarpacientes.this,2));
+        firestoreRecyclerAdapter.startListening();
+        listaviewpaciente.setAdapter(firestoreRecyclerAdapter);*/
+    }
+
+    private void Buscarpaciente (String buscar_pac){
+        buscarnom = pacientereference.orderBy("nombre").startAt(buscar_pac).endAt(buscar_pac + "\uf8ff");
+        //Toast.makeText(Listarpacientes.this, "nombre "+buscarnom, Toast.LENGTH_SHORT).show();
+
+        options = new FirestoreRecyclerOptions.Builder<Pacientes>().setQuery(buscarnom, Pacientes.class).build();
+
+        firestoreRecyclerAdapter = new FirestoreRecyclerAdapter<Pacientes, ViewHolder_listapaciente>(options) {
+
+            protected void onBindViewHolder(@NonNull ViewHolder_listapaciente viewHolder_listapaciente, int position, @NonNull Pacientes pacientes) {
+                viewHolder_listapaciente.SetearDatos(
+                        getApplicationContext(),
+                        pacientes.getNombre(),
+                        pacientes.getApellidopat(),
+                        pacientes.getApellidomat(),
+                        pacientes.getFechanac(),
+                        pacientes.getLugar(),
+                        pacientes.getDireccion(),
+                        pacientes.getTelefono(),
+                        pacientes.getEscuela()
+
+                );
+            }
+
+
+            public ViewHolder_listapaciente onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+                View view  = LayoutInflater.from(parent.getContext()).inflate(R.layout.listcard_element, parent, false);
+                ViewHolder_listapaciente viewHolder_listapaciente= new ViewHolder_listapaciente(view);
+                viewHolder_listapaciente.setOnClickListener(new ViewHolder_listapaciente.ClickListener() {
+                    @Override
+                    public void onItemClick(View view, int position) {
+
+                        String myId = firestoreRecyclerAdapter.getSnapshots().getSnapshot(position).getId();//recupera el ID del recycler correspondiente a firestore
                       /*Intent intent= new Intent(Listarpacientes.this, Paciente.class);
                         intent.putExtra("idpac",myId);
                         startActivity(intent);*/
@@ -163,11 +264,12 @@ public class Listarpacientes extends AppCompatActivity {
             }
         };
 
-        linearLayoutManager= new LinearLayoutManager(Listarpacientes.this,LinearLayoutManager.VERTICAL,false);
+        /*linearLayoutManager= new LinearLayoutManager(Listarpacientes.this,LinearLayoutManager.VERTICAL,false);
         linearLayoutManager.setReverseLayout(true);
-        linearLayoutManager.setStackFromEnd(true);
+        linearLayoutManager.setStackFromEnd(true);*/
 
-        listaviewpaciente.setLayoutManager(linearLayoutManager);
+        listaviewpaciente.setLayoutManager(new GridLayoutManager(Listarpacientes.this,2));
+        firestoreRecyclerAdapter.startListening();
         listaviewpaciente.setAdapter(firestoreRecyclerAdapter);
     }
 
@@ -180,7 +282,6 @@ public class Listarpacientes extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 //Eliminar paciente de la BD
-
                 pacientereference.document(pacienteid).collection("datos").get()
                         .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                             @Override
@@ -210,7 +311,6 @@ public class Listarpacientes extends AppCompatActivity {
                         });
                 pacientereference.document(pacienteid).delete();
                 Toast.makeText(Listarpacientes.this, "Paciente eliminado", Toast.LENGTH_SHORT).show();
-
 
             }
         });

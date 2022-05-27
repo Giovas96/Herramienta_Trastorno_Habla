@@ -6,16 +6,36 @@
     android:layout_height="match_parent"
     android:background="@color/background_general"
     tools:context=".Listarpacientes">
-    <include layout="@layout/toolbar_listar_pacientes"/>
 
+
+    <include
+        android:id="@+id/include2"
+        layout="@layout/toolbar_listar_pacientes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/listaviewpaciente"
-        android:layout_width="384dp"
-        android:layout_height="562dp"
-        android:layout_marginBottom="24dp"
+        android:layout_width="367dp"
+        android:layout_height="548dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.407"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <SearchView
+        android:id="@+id/buscar_paciente"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/design_default_color_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include2" />
 </androidx.constraintlayout.widget.ConstraintLayout>
