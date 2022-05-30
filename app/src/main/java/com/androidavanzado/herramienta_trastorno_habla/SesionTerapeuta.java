@@ -126,7 +126,8 @@ public class SesionTerapeuta extends AppCompatActivity {
                     startActivity(intent);
                 } else if (position ==1){
                     //click en Listar Actividades
-
+                    Intent intent= new Intent(SesionTerapeuta.this, Listar_actividades.class);
+                    startActivity(intent);
                 } else if (position ==2){
                     //Click en Listar Notas
                     Intent intent= new Intent(SesionTerapeuta.this, Listar_notas.class);

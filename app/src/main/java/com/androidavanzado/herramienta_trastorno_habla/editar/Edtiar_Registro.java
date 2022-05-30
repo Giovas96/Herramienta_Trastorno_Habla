@@ -9,10 +9,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.androidavanzado.herramienta_trastorno_habla.R;
-import com.androidavanzado.herramienta_trastorno_habla.RegistrarseActivity;
 import com.androidavanzado.herramienta_trastorno_habla.SesionTerapeuta;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -29,7 +29,7 @@ import java.util.regex.Pattern;
 public class Edtiar_Registro extends AppCompatActivity {
     FirebaseAuth mAuth;
     Button btnregister;
-    EditText nombre, apellidop, apellidom, titulo, especialidad, direccion, cedula, telefono, correo, contrasena;
+    EditText nombre, apellidop, apellidom, titulo, especialidad, direccion, cedula, telefono, correo, contra,contrasena,ncontrasena, cncontrasena;
     FirebaseFirestore nFirestore;
     DocumentReference terapeuta;
     ImageView back;
@@ -50,7 +50,10 @@ public class Edtiar_Registro extends AppCompatActivity {
         cedula = findViewById(R.id.Text_cedula_c);
         telefono = findViewById(R.id.Text_telefonot_c);
         correo = findViewById(R.id.text_correot_c);
+        contra= findViewById(R.id.contractual);
         contrasena = findViewById(R.id.text_contrasena_c);
+        ncontrasena= findViewById(R.id.contrasena_n);
+        cncontrasena=findViewById(R.id.contrasena_cn);
         btnregister = findViewById(R.id.btn_registrarse_c);
         idp=mAuth.getCurrentUser().getUid();
         terapeuta=nFirestore.collection("terapeutas").document(idp);
@@ -111,28 +114,31 @@ public class Edtiar_Registro extends AppCompatActivity {
         String ceduser = cedula.getText().toString();
         String teluser = telefono.getText().toString();
         String correuser = correo.getText().toString();
-        String contruser = contrasena.getText().toString();
+        String contract = contra.getText().toString();
+        String contruser = contrasena.getText().toString().trim();
+        String nuevcontra = ncontrasena.getText().toString().trim();
+        String confcontra= cncontrasena.getText().toString().trim();
         if (!nameuser.isEmpty() && !appuser.isEmpty() && !apmuser.isEmpty() && !tituser.isEmpty() && !espuser.isEmpty() &&
-                !direcuser.isEmpty() && !ceduser.isEmpty() && !teluser.isEmpty() && !correuser.isEmpty() && !contruser.isEmpty()) {
-            if (isEmailValid(correuser)) {
+                !direcuser.isEmpty() && !ceduser.isEmpty() && !teluser.isEmpty() && !contruser.isEmpty()) {
 
-                if (contruser.length() >= 8) {
+                if (contruser.equals(contract) && nuevcontra.equals("") && confcontra.equals("")) {
                     creatUser(nameuser, appuser, apmuser, tituser, espuser, direcuser, ceduser, teluser, correuser, contruser);
-                } else {
-                    Toast.makeText(Edtiar_Registro.this, "Completaste los datos con un email invalido", Toast.LENGTH_SHORT).show();
+                } else if(contruser.equals(contract) && confcontra.equals(nuevcontra) && confcontra.length()>=8) {
+                creatUser(nameuser, appuser, apmuser, tituser, espuser, direcuser, ceduser, teluser, correuser, confcontra);
+                }else{
+                    Toast.makeText(Edtiar_Registro.this, "Confirme su contraseña acutal y la nueva contraseña debe tener 8 o más caracteres", Toast.LENGTH_SHORT).show();
                 }
-            } else {
-                Toast.makeText(Edtiar_Registro.this, "Completaste los datos y el email es incorrecto", Toast.LENGTH_SHORT).show();
-            }
-        }
-        else {
-            Toast.makeText(Edtiar_Registro.this, "Complete los datos para continuar", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(Edtiar_Registro.this, "Complete los datos y confirme su contraseña actual para continuar", Toast.LENGTH_SHORT).show();
         }
 
 
     }
     private void creatUser(final String nameuser, String appuser, String apmuser, String tituser, String espuser,
                            String direcuser, String ceduser,String teluser, final String correuser, String contruser) {
+
+
+
         String id = mAuth.getCurrentUser().getUid();
         Map<String, Object> map = new HashMap<>();
         map.put("id", id);
@@ -149,7 +155,7 @@ public class Edtiar_Registro extends AppCompatActivity {
         terapeuta.set(map);
     }
     private void SetearDatos(String nomb,String apellidopat,String apellidomat,String titu,String especi,
-                             String direcci,String cedu,String tele,String corre,String contra){
+                             String direcci,String cedu,String tele,String corre,String contrac){
 
         nombre.setText(nomb);
         apellidop.setText(apellidopat);
@@ -160,14 +166,8 @@ public class Edtiar_Registro extends AppCompatActivity {
         cedula.setText(cedu);
         telefono.setText(tele);
         correo.setText(corre);
-        contrasena.setText(contra);
+        contra.setText(contrac);
     }
 
-    public boolean isEmailValid (String email){
-        String expression ="^[\\w\\.-]+@([\\w\\-]+\\.)+[A-Z]{2,4}$";
-        Pattern pattern = Pattern.compile(expression, Pattern.CASE_INSENSITIVE);
-        Matcher matcher= pattern.matcher(email);
-        return matcher.matches();
 
-    }
 }

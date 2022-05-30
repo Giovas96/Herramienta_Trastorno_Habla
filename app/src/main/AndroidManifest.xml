@@ -14,7 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Herramienta_Trastorno_Habla">
-        <activity android:name=".editar.Editar_nota"></activity>
+        <activity android:name=".Listar_actividades"></activity>
+        <activity android:name=".editar.Editar_nota" />
         <activity android:name=".consultas.Consultar_nota" />
         <activity android:name=".Listar_notas" />
         <activity android:name=".Agregar_nota" />
