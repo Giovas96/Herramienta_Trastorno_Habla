@@ -182,6 +182,7 @@ public class Agregar_Cita extends AppCompatActivity {
         nombre.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
             @Override
             public void onSuccess(DocumentSnapshot documentSnapshot) {
+                    long calID = 3;
                     Pacientes paciente=documentSnapshot.toObject(Pacientes.class);
                     String nombrepaciente=paciente.getNombre();
                     String apppaciente=paciente.getApellidopat();

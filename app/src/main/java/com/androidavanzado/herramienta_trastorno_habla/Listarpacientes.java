@@ -43,7 +43,6 @@ public class Listarpacientes extends AppCompatActivity {
     FirebaseAuth mAuth;
     String idp, idpac;
     CollectionReference pacientereference;
-    Query buscarnom;
     Dialog dialog;
     Button beliminar,bconsultar, beditar;
     SearchView buscar;
@@ -82,13 +81,13 @@ public class Listarpacientes extends AppCompatActivity {
             @Override
             public boolean onQueryTextSubmit(String query) {
                 Buscarpaciente(query);
-                return true;
+                return false;
             }
 
             @Override
             public boolean onQueryTextChange(String newText) {
                 Buscarpaciente(newText);
-                return true;
+                return false;
             }
         });
 
@@ -190,7 +189,8 @@ public class Listarpacientes extends AppCompatActivity {
     }
 
     private void Buscarpaciente (String buscar_pac){
-        buscarnom = pacientereference.orderBy("nombre").startAt(buscar_pac).endAt(buscar_pac + "\uf8ff");
+        Query buscarnom = pacientereference.orderBy("nombre").startAt(buscar_pac).endAt(buscar_pac + "\uf8ff");
+
         //Toast.makeText(Listarpacientes.this, "nombre "+buscarnom, Toast.LENGTH_SHORT).show();
 
         options = new FirestoreRecyclerOptions.Builder<Pacientes>().setQuery(buscarnom, Pacientes.class).build();
@@ -264,11 +264,14 @@ public class Listarpacientes extends AppCompatActivity {
             }
         };
 
-        /*linearLayoutManager= new LinearLayoutManager(Listarpacientes.this,LinearLayoutManager.VERTICAL,false);
+        linearLayoutManager= new LinearLayoutManager(Listarpacientes.this,LinearLayoutManager.VERTICAL,false);
         linearLayoutManager.setReverseLayout(true);
-        linearLayoutManager.setStackFromEnd(true);*/
+        linearLayoutManager.setStackFromEnd(true);
 
-        listaviewpaciente.setLayoutManager(new GridLayoutManager(Listarpacientes.this,2));
+        /*listaviewpaciente.setLayoutManager(linearLayoutManager);
+        listaviewpaciente.setAdapter(firestoreRecyclerAdapter);*/
+
+        listaviewpaciente.setLayoutManager(new GridLayoutManager(Listarpacientes.this,1));
         firestoreRecyclerAdapter.startListening();
         listaviewpaciente.setAdapter(firestoreRecyclerAdapter);
     }
