@@ -13,8 +13,8 @@ import android.widget.Toast;
 public class Listar_actividades extends AppCompatActivity {
     private ListView actividades;
     ImageView back;
-    String opciones []={"Obtención del fonema", "Fijación de fonema", "Ejercitación", "Integración" };
-    int iconos [] = {R.drawable.discurso,R.drawable.rana, R.drawable.memoria, R.drawable.galeria};
+    String opciones []={"Discriminación Auditiva", "Obtención del fonema", "Fijación de fonema", "Ejercitación", "Integración" };
+    int iconos [] = {R.drawable.escucha,R.drawable.discurso,R.drawable.rana, R.drawable.memoria, R.drawable.galeria};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,21 +37,26 @@ public class Listar_actividades extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 if (position==0){
-                    //click en obtención de fonema
-                    Toast.makeText(Listar_actividades.this, "Obtención de fonema", Toast.LENGTH_SHORT).show();
+                    //click en discriminacion auditiva
+                    Toast.makeText(Listar_actividades.this, "Discriminación auditiva", Toast.LENGTH_SHORT).show();
                 } else if (position ==1){
-                    //click en fijación de fonema
-                    Toast.makeText(Listar_actividades.this, "Fijación de fonema", Toast.LENGTH_SHORT).show();
+                    //click en obtención del fonema
+                    Toast.makeText(Listar_actividades.this, "Obtención de fonema", Toast.LENGTH_SHORT).show();
 
                 } else if (position ==2){
-                    //Click en Ejercitación
-                    Toast.makeText(Listar_actividades.this, "Ejercitación", Toast.LENGTH_SHORT).show();
-
+                    //click en fijación de fonema
+                    Intent intent= new Intent(Listar_actividades.this, Listar_actividades_fijacion.class);
+                    startActivity(intent);
 
                 } else if (position ==3){
-                    //Click en Integración
-                    Toast.makeText(Listar_actividades.this, "Integración", Toast.LENGTH_SHORT).show();
+                    //Click en Ejercitación
+                    Intent intent= new Intent(Listar_actividades.this, Listar_actividades_ejercitacion.class);
+                    startActivity(intent);
 
+                } else if (position == 4){
+                    //Click en Integración
+                    Intent intent= new Intent(Listar_actividades.this, Galeria_integracion.class);
+                    startActivity(intent);
                 }
             }
         });

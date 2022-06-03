@@ -130,9 +130,9 @@ public class Agregar_Cita extends AppCompatActivity {
 
 
                         }
-                         hora1=hourOfDay;
-                         minute1=minute;
                         hora.setText(time);
+                         horas=hourOfDay;
+                         minutos=minute;
                     }
                 }
                         ,horas,minutos,false);
@@ -182,7 +182,7 @@ public class Agregar_Cita extends AppCompatActivity {
         nombre.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
             @Override
             public void onSuccess(DocumentSnapshot documentSnapshot) {
-                    long calID = 3;
+                    //long calID = 3;
                     Pacientes paciente=documentSnapshot.toObject(Pacientes.class);
                     String nombrepaciente=paciente.getNombre();
                     String apppaciente=paciente.getApellidopat();
@@ -192,13 +192,15 @@ public class Agregar_Cita extends AppCompatActivity {
                     inicio.set(Calendar.MONTH,mes1);
                     inicio.set(Calendar.DAY_OF_MONTH,dia1);
 
-                    inicio.set(Calendar.HOUR_OF_DAY,hora1);
-                    inicio.set(Calendar.MINUTE, minute1);
+                    inicio.set(Calendar.HOUR_OF_DAY,horas);
+                    inicio.set(Calendar.MINUTE, minutos);
                     Intent intent= new Intent(Intent.ACTION_INSERT);
                     intent.setData(CalendarContract.Events.CONTENT_URI);
+                    //intent.putExtra(CalendarContract.Events.CALENDAR_ID, calID);
                     intent.putExtra(CalendarContract.Events.TITLE, nombrepaciente+ " " + apppaciente+" "+apmpaciente+"("+ motivos+")" );
                     intent.putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME, inicio.getTimeInMillis());
                     intent.putExtra(CalendarContract.Events.DESCRIPTION, duraciones + "\n"+ observaciones);
+
                     startActivity(intent);
             }
         });

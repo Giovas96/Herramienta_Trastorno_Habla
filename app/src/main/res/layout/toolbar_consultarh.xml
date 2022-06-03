@@ -18,10 +18,12 @@
 
         <TextView
             android:id="@+id/title_regisp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="150dp"
-            android:layout_toEndOf="@+id/back_historial"
+            android:layout_width="157dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="130dp"
+            android:layout_marginEnd="124dp"
             android:text="Paciente"
             android:textColor="@android:color/white"
             android:textSize="30sp"

@@ -18,12 +18,12 @@
 
         <TextView
             android:id="@+id/title_editnotas"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="60dp"
-            android:layout_marginEnd="26dp"
-            android:layout_toStartOf="@+id/save_nota"
-            android:layout_toEndOf="@+id/back_editnot"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_alignEnd="@+id/save_editnota"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="128dp"
+            android:layout_marginEnd="83dp"
             android:text="Editar nota"
             android:textColor="@android:color/white"
             android:textSize="30sp"

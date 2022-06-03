@@ -30,10 +30,10 @@ public class MainActivity extends AppCompatActivity {
     FirebaseAuth mAuth;
     EditText correo, contrasena;
     Button btnregister;
-    Button btnlogin;
+    Button btnlogin, btnanonimo;
     TextView  btnolvidar;
     Dialog dialog;
-    ImageView clo;
+
 
 
 
@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
         btnregister = findViewById(R.id.btn_registro);
         btnlogin = findViewById(R.id.btn_inicio);
         btnolvidar=findViewById(R.id.olvidar);
+        btnanonimo=findViewById(R.id.btn_anonymous);
         mAuth=FirebaseAuth.getInstance();
 
         dialog = new Dialog(MainActivity.this);
@@ -88,8 +89,33 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btnanonimo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                loginanonymous();
+            }
+        });
 
 
+    }
+
+    private void loginanonymous(){
+        mAuth.signInAnonymously()
+                .addOnCompleteListener(MainActivity.this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            FirebaseUser user = mAuth.getCurrentUser();
+                            startActivity(new Intent(MainActivity.this, Listar_actividades_anonymous.class));
+
+                        }
+                    }
+                }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(MainActivity.this, "Error al acceder", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
 

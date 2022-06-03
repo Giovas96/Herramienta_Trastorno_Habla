@@ -16,17 +16,17 @@
             android:layout_centerVertical="true"
             android:layout_marginStart="5dp"
             android:src="@drawable/ic_baseline_arrow_circle_left_24" />
+
         <TextView
             android:id="@+id/title_list_add"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="60dp"
-            android:layout_toEndOf="@+id/back_historial"
+            android:layout_alignEnd="@+id/add_eval"
+            android:layout_marginEnd="167dp"
+            android:text="Paciente"
             android:textColor="@android:color/white"
-            android:layout_centerVertical="true"
             android:textSize="30sp"
-            android:textStyle="bold"
-            android:text="Paciente"/>
+            android:textStyle="bold" />
 
         <ImageView
             android:id="@+id/add_eval"

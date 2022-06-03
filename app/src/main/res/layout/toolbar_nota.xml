@@ -15,26 +15,25 @@
             android:layout_centerVertical="true"
             android:layout_marginStart="5dp"
             android:src="@drawable/ic_baseline_arrow_circle_left_24" />
+
         <TextView
             android:id="@+id/title_agregn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:layout_toEndOf="@+id/back_listn"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="101dp"
+            android:text="Registro de nota"
             android:textColor="@android:color/white"
-            android:layout_centerVertical="true"
             android:textSize="30sp"
-            android:textStyle="bold"
-            android:text="Registro de nota"/>
+            android:textStyle="bold" />
 
         <ImageView
             android:id="@+id/save_regisn"
             android:layout_width="52dp"
             android:layout_height="47dp"
-            android:layout_marginStart="30dp"
-            android:layout_toEndOf="@+id/title_agregn"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="1dp"
             android:src="@drawable/ic_baseline_save_24" />
-
 
 
     </RelativeLayout>
