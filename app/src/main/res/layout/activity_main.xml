@@ -9,7 +9,7 @@
 
     <LinearLayout
         android:id="@+id/linearLayout3"
-        android:layout_width="360dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="220dp"
         android:orientation="horizontal"
@@ -67,8 +67,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayout4"
-        android:layout_width="362dp"
-        android:layout_height="46dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -78,7 +78,7 @@
 
         <TextView
             android:id="@+id/textView107"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
@@ -86,8 +86,8 @@
 
         <EditText
             android:id="@+id/Contrasena_inicio"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPassword" />
     </LinearLayout>
