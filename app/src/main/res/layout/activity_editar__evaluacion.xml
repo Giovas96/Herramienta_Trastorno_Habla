@@ -47,7 +47,7 @@
                 android:layout_weight="1"
                 android:text="Fonema" />
 
-            <Spinner
+            <TextView
                 android:id="@+id/spinner_evaluacion_e"
                 android:layout_width="213dp"
                 android:layout_height="wrap_content"

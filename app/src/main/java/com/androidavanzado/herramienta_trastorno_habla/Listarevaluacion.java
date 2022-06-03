@@ -56,6 +56,7 @@ public class Listarevaluacion extends AppCompatActivity {
     String idp, idpaciente;
     CollectionReference pacientereference;
     DocumentReference evaluacionp;
+    ImageView back, add;
     Dialog dialog;
     LinearLayoutManager linearLayoutManager;
     Button agregar, bconsultar, beditar,descargar;
@@ -72,8 +73,8 @@ public class Listarevaluacion extends AppCompatActivity {
         idpaciente = getIntent().getStringExtra("idpa");
         idp = mAuth.getCurrentUser().getUid();
         pacientereference = firebaseFirestore.collection("terapeutas").document(idp).collection("paciente").document(idpaciente).collection("evaluacion");
-        ImageView back = findViewById(R.id.back_list_eval);
-        ImageView add = findViewById(R.id.add_eval);
+        back = findViewById(R.id.back_list_eval);
+        add = findViewById(R.id.add_eval);
 
         listaviewevaluacion = findViewById(R.id.listaviewevaluacion);
         listaviewevaluacion.setHasFixedSize(true);
@@ -95,15 +96,17 @@ public class Listarevaluacion extends AppCompatActivity {
                 startActivity(k);
             }
         });
+
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                Intent i = new Intent(Listarevaluacion.this, Agregar_Evaluacion.class);
-                i.putExtra("idpa", idpaciente);
-                startActivity(i);
+                Toast.makeText(Listarevaluacion.this, "click en la imagen", Toast.LENGTH_SHORT).show();
+                Intent a = new Intent(Listarevaluacion.this, Agregar_Evaluacion.class);
+                a.putExtra("idpa", idpaciente);
+                startActivity(a);
             }
         });
+
     }
         private void Listarevaluacion() {
             options = new FirestoreRecyclerOptions.Builder<Evaluacion>().setQuery(pacientereference, Evaluacion.class).build();

@@ -37,13 +37,7 @@
             android:layout_alignParentEnd="true"
             android:src="@drawable/ic_baseline_add_circle_24" />
 
-        <Spinner
-            android:layout_width="52dp"
-            android:layout_height="47dp"
-            android:layout_centerVertical="true"
-            android:layout_marginStart="5dp"
-            android:layout_alignParentEnd="true"
-            app:icon="@drawable/ic_baseline_add_circle_24"/>
+
 
     </RelativeLayout>
 

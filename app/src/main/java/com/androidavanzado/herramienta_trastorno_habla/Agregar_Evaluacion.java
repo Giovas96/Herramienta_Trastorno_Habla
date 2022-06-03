@@ -1,5 +1,6 @@
 package com.androidavanzado.herramienta_trastorno_habla;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
@@ -15,9 +16,12 @@ import android.widget.Toast;
 
 import com.androidavanzado.herramienta_trastorno_habla.Objetos.Citas;
 import com.androidavanzado.herramienta_trastorno_habla.Objetos.Evaluacion;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.Calendar;
@@ -96,10 +100,29 @@ public class Agregar_Evaluacion extends AppCompatActivity {
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                registrar();
-                Intent c=new Intent(Agregar_Evaluacion.this, Listarevaluacion.class);
-                c.putExtra("idpa", idpaciente);
-                startActivity(c);
+
+                String fonemareg= spinner.getSelectedItem().toString();
+                DocumentReference existe= aevaluacion.document(fonemareg);
+
+                existe.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                        if (task.isSuccessful()) {
+                            DocumentSnapshot document = task.getResult();
+                            if (document.exists()) {
+                                Toast.makeText(Agregar_Evaluacion.this, "El fonema ya fue registrado anteriormente", Toast.LENGTH_SHORT).show();
+                            }else{
+                                registrar();
+                                Intent c=new Intent(Agregar_Evaluacion.this, Listarevaluacion.class);
+                                c.putExtra("idpa", idpaciente);
+                                startActivity(c);
+                            }
+
+                        }
+                    }
+                });
+
+
             }
         });
     }

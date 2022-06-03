@@ -11,6 +11,7 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.androidavanzado.herramienta_trastorno_habla.Agregar_Evaluacion;
@@ -29,7 +30,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import java.util.Calendar;
 
 public class Editar_Evaluacion extends AppCompatActivity {
-    Spinner spinner;
+    TextView spinner;
     EditText ini,dir, inv,inte, tra,fi, grur,grul, grus, obs, adq;
     String idpaciente, idprincipal,myid;
     FirebaseAuth mAuth;
@@ -52,9 +53,6 @@ public class Editar_Evaluacion extends AppCompatActivity {
         document= nFirestore.collection("terapeutas").document(idprincipal).collection("paciente").document(idpaciente).collection("evaluacion").document(myid);
 
 
-        String [] fonemas={"/p/","/t/","/k/","/b/","/d/","/g/","/f/","/s/","/x/","/c^/","/m/","/n/","/ñ/","/l/","/ll/","/-r/","/r/"};
-        ArrayAdapter<String> adapter=new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item,fonemas);
-        spinner.setAdapter(adapter);
 
         adq.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -123,7 +121,7 @@ public class Editar_Evaluacion extends AppCompatActivity {
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String fonema= spinner.getSelectedItem().toString();
+                String fonema= spinner.getText().toString();
                 String inic = ini.getText().toString();
                 String dire = dir.getText().toString();
                 String inve = inv.getText().toString();
@@ -168,61 +166,7 @@ public class Editar_Evaluacion extends AppCompatActivity {
                              String intervolica, String trabada, String fina, String gr, String gl, String gs,
                              String observacion, String adquirido){
 
-       String p= "/p/",t="/t/",k="/k/",b="/b/",d="/d/",g="/g/",f="/f/",s="/s/",x="/x/",c="/c^/",m="/m/",n="/n/",ñ="/ñ/",l="/l/",ll="/ll/",rr="/-r/",r="/r/";
-        int fon;
-        if(fonema.equals(p)){
-             fon =0;
-            spinner.setSelection(fon);
-        }else if (fonema.equals(t)){
-             fon=1;
-            spinner.setSelection(fon);
-        }else if (fonema.equals(k)){
-             fon=2;
-            spinner.setSelection(fon);
-        }else if (fonema.equals(b)){
-             fon=3;
-            spinner.setSelection(fon);
-        }else if (fonema.equals(d)){
-            fon=4;
-            spinner.setSelection(fon);
-        }else if (fonema.equals(g)){
-            fon=5;
-            spinner.setSelection(fon);
-        }else if (fonema.equals(f)){
-            fon=6;
-            spinner.setSelection(fon);
-        }else if (fonema.equals(s)){
-            fon=7;
-            spinner.setSelection(fon);
-        }else if (fonema.equals(x)){
-            fon=8;
-            spinner.setSelection(fon);
-        }else if (fonema.equals(c)){
-            fon=9;
-            spinner.setSelection(fon);
-        }else if (fonema.equals(m)){
-            fon=10;
-            spinner.setSelection(fon);
-        }else if (fonema.equals(n)){
-            fon=11;
-            spinner.setSelection(fon);
-        }else if (fonema.equals(ñ)){
-            fon=12;
-            spinner.setSelection(fon);
-        }else if (fonema.equals(l)){
-            fon=13;
-            spinner.setSelection(fon);
-        }else if (fonema.equals(ll)){
-            fon=14;
-            spinner.setSelection(fon);
-        }else if (fonema.equals(rr)){
-            fon=15;
-            spinner.setSelection(fon);
-        }else if (fonema.equals(r)){
-            fon=16;
-            spinner.setSelection(fon);
-        }
-
+        spinner.setText(fonema);
         ini.setText(inicial);
         dir.setText(directa);
         inv.setText(inversa);

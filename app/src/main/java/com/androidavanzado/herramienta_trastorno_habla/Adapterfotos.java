@@ -42,9 +42,8 @@ public class Adapterfotos extends PagerAdapter {
     }
 
 
-    @NonNull
-    @Override
-    public Object instatiateItem(@NonNull ViewGroup container, int position){
+   /*
+    public Object instatiateItem( ViewGroup container, int position){
 
         View v= inflater.inflate(R.layout.item_foto, container, false);
         assert v!=null;
@@ -65,7 +64,7 @@ public class Adapterfotos extends PagerAdapter {
 
        return layout;
 
-    }
+    }*/
 
     @Override
     public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object){

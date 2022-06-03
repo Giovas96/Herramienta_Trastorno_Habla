@@ -72,10 +72,11 @@
             <TextView
                 android:id="@+id/editTextInicial_c"
                 android:layout_width="180dp"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:layout_weight="1"
                 android:ems="10"
-                android:inputType="textPersonName" />
+                android:inputType="textMultiLine"
+                android:textSize="12sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -94,10 +95,11 @@
             <TextView
                 android:id="@+id/editTextDirecta_c"
                 android:layout_width="180dp"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:layout_weight="1"
                 android:ems="10"
-                android:inputType="textPersonName" />
+                android:inputType="textMultiLine"
+                android:textSize="12sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -116,10 +118,11 @@
             <TextView
                 android:id="@+id/editTextInversa_c"
                 android:layout_width="180dp"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:layout_weight="1"
                 android:ems="10"
-                android:inputType="textPersonName" />
+                android:inputType="textMultiLine"
+                android:textSize="12sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -138,10 +141,11 @@
             <TextView
                 android:id="@+id/editTextInter_c"
                 android:layout_width="180dp"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:layout_weight="1"
                 android:ems="10"
-                android:inputType="textPersonName" />
+                android:inputType="textMultiLine"
+                android:textSize="12sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -160,10 +164,11 @@
             <TextView
                 android:id="@+id/editTextTrabada_c"
                 android:layout_width="180dp"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:layout_weight="1"
                 android:ems="10"
-                android:inputType="textPersonName" />
+                android:inputType="textMultiLine"
+                android:textSize="12sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -182,10 +187,11 @@
             <TextView
                 android:id="@+id/editTextFinal_c"
                 android:layout_width="180dp"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:layout_weight="1"
                 android:ems="10"
-                android:inputType="textPersonName" />
+                android:inputType="textMultiLine"
+                android:textSize="12sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -204,10 +210,11 @@
             <TextView
                 android:id="@+id/editTextGr_c"
                 android:layout_width="180dp"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:layout_weight="1"
                 android:ems="10"
-                android:inputType="textPersonName" />
+                android:inputType="textMultiLine"
+                android:textSize="12sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -226,10 +233,11 @@
             <TextView
                 android:id="@+id/editTextGl_c"
                 android:layout_width="180dp"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:layout_weight="1"
                 android:ems="10"
-                android:inputType="textPersonName" />
+                android:inputType="textMultiLine"
+                android:textSize="12sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -248,10 +256,11 @@
             <TextView
                 android:id="@+id/editTextGs_c"
                 android:layout_width="180dp"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:layout_weight="1"
                 android:ems="10"
-                android:inputType="textPersonName" />
+                android:inputType="textMultiLine"
+                android:textSize="12sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -270,10 +279,11 @@
             <TextView
                 android:id="@+id/editTextObservacion_eval_c"
                 android:layout_width="180dp"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:layout_weight="1"
                 android:ems="10"
-                android:inputType="textPersonName" />
+                android:inputType="textMultiLine"
+                android:textSize="12sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -292,7 +302,7 @@
             <TextView
                 android:id="@+id/editTextAdquirido_c"
                 android:layout_width="180dp"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:layout_weight="1"
                 android:ems="10"
                 android:inputType="date" />

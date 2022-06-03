@@ -170,6 +170,9 @@ public class Edtiar_Registro extends AppCompatActivity {
         map.put("Correo electronico", correuser);
         map.put("Contraseña", contruser);
         terapeuta.set(map);
+
+        Toast.makeText(Edtiar_Registro.this, "Los datos han sido actualizados", Toast.LENGTH_SHORT).show();
+
     }
 
     private void contrasenaact(final String nameuser, String appuser, String apmuser, String tituser, String espuser,
