@@ -55,7 +55,7 @@ public class Listar_actividades extends AppCompatActivity {
 
                 } else if (position == 4){
                     //Click en Integración
-                    Intent intent= new Intent(Listar_actividades.this, Galeria_integracion.class);
+                    Intent intent= new Intent(Listar_actividades.this, Opciones_Galeria.class);
                     startActivity(intent);
                 }
             }

@@ -10,26 +10,32 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Spinner;
 
-public class Opciones_memorama extends AppCompatActivity {
+public class Opciones_Galeria extends AppCompatActivity {
 
     Spinner spin_fonema, spin_position;
     Button jbtnPlay;
     String palabracol, fonema, position;
-
-    ImageView back;
+    ImageView back,add;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_opciones_memorama);
+        setContentView(R.layout.activity_opciones__galeria);
 
-        back = findViewById(R.id.back_list_actividad);
-
+        back = findViewById(R.id.back_opgal_actividad);
+        add = findViewById(R.id.add_galactividad);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent b = new Intent(Opciones_memorama.this, Listar_actividades_ejercitacion.class);
+                Intent b = new Intent(Opciones_Galeria.this, Listar_actividades.class);
                 startActivity(b);
+            }
+        });
+        add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent a= new Intent(Opciones_Galeria.this, Load.class);
+                startActivity(a);
             }
         });
 
@@ -124,7 +130,7 @@ public class Opciones_memorama extends AppCompatActivity {
                 bundle.putString("fonema", palabracol);
                 bundle.putString("position", position);
 
-                Intent c = new Intent(Opciones_memorama.this, Game_memorama.class);
+                Intent c = new Intent(Opciones_Galeria.this, Galeria_integracion.class);
                 c.putExtras(bundle);
                 startActivity(c);
 

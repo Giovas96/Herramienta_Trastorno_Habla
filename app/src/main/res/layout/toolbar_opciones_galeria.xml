@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/toolbar">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/back_opgal_actividad"
+            android:layout_width="52dp"
+            android:layout_height="47dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"
+            android:src="@drawable/ic_baseline_arrow_circle_left_24" />
+
+        <ImageView
+            android:id="@+id/add_galactividad"
+            android:layout_width="52dp"
+            android:layout_height="47dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="18dp"
+            android:src="@drawable/ic_baseline_add_circle_24" />
+
+    </RelativeLayout>
+</Toolbar>

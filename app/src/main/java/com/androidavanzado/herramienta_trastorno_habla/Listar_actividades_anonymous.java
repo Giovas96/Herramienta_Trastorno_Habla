@@ -60,8 +60,8 @@ public class Listar_actividades_anonymous extends AppCompatActivity {
 
                 } else if (position == 4){
                     //Click en Integración
-                    Toast.makeText(Listar_actividades_anonymous.this, "Integración", Toast.LENGTH_SHORT).show();
-
+                    Intent intent= new Intent(Listar_actividades_anonymous.this, Opciones_Galeria_Anonymous.class);
+                    startActivity(intent);
                 }
             }
         });

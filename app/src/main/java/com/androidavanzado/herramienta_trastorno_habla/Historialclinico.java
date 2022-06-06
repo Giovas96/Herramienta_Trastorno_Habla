@@ -61,7 +61,7 @@ public class Historialclinico extends AppCompatActivity {
     CollectionReference historial;
     DocumentReference document,datos, desarrollo,habitos,evolucion,lenguaje,antecedentespdf,escolarpdf;
     FirebaseAuth mAuth;
-    Button agregar,bconsultar, beditar, descargar;
+    Button agregar,bconsultar, beditar, descargar, descargaruni;
     FirebaseFirestore terapeuta;
     String idprincipal, idpaciente;
     Dialog dialog;
@@ -98,6 +98,7 @@ public class Historialclinico extends AppCompatActivity {
         agregar=dialog.findViewById(R.id.AgregarH);
         bconsultar= dialog.findViewById(R.id.ConsultarH);
         beditar= dialog.findViewById(R.id.EditarH);
+        descargaruni=dialog.findViewById(R.id.DescargarH);
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -120,9 +121,11 @@ public class Historialclinico extends AppCompatActivity {
                             if (task.isSuccessful()) {
                                 DocumentSnapshot document = task.getResult();
                                 if (document.exists()) {agregar.setVisibility(View.GONE);
+                                    descargaruni.setVisibility(View.GONE);
                                 } else {
                                     agregar.setVisibility(View.VISIBLE);
                                     bconsultar.setVisibility(View.GONE);
+                                    descargaruni.setVisibility(View.GONE);
                                     beditar.setVisibility(View.GONE);
                                     agregar.setOnClickListener(new View.OnClickListener() {
                                         @Override
@@ -170,10 +173,12 @@ public class Historialclinico extends AppCompatActivity {
                                 DocumentSnapshot document = task.getResult();
                                 if (document.exists()) {
                                     agregar.setVisibility(View.GONE);
+                                    descargaruni.setVisibility(View.GONE);
                                 } else {
                                     agregar.setVisibility(View.VISIBLE);
                                     bconsultar.setVisibility(View.GONE);
                                     beditar.setVisibility(View.GONE);
+                                    descargaruni.setVisibility(View.GONE);
                                     agregar.setOnClickListener(new View.OnClickListener() {
                                         @Override
                                         public void onClick(View v) {
@@ -219,10 +224,12 @@ public class Historialclinico extends AppCompatActivity {
                                 DocumentSnapshot document = task.getResult();
                                 if (document.exists()) {
                                     agregar.setVisibility(View.GONE);
+                                    descargaruni.setVisibility(View.GONE);
                                 } else {
                                     agregar.setVisibility(View.VISIBLE);
                                     bconsultar.setVisibility(View.GONE);
                                     beditar.setVisibility(View.GONE);
+                                    descargaruni.setVisibility(View.GONE);
                                     agregar.setOnClickListener(new View.OnClickListener() {
                                         @Override
                                         public void onClick(View v) {
@@ -268,9 +275,11 @@ public class Historialclinico extends AppCompatActivity {
                                 DocumentSnapshot document = task.getResult();
                                 if (document.exists()) {
                                     agregar.setVisibility(View.GONE);
+                                    descargaruni.setVisibility(View.GONE);
                                 } else {
                                     agregar.setVisibility(View.VISIBLE);
                                     bconsultar.setVisibility(View.GONE);
+                                    descargaruni.setVisibility(View.GONE);
                                     beditar.setVisibility(View.GONE);
                                     agregar.setOnClickListener(new View.OnClickListener() {
                                         @Override
@@ -314,10 +323,12 @@ public class Historialclinico extends AppCompatActivity {
                                 DocumentSnapshot document = task.getResult();
                                 if (document.exists()) {
                                     agregar.setVisibility(View.GONE);
+                                    descargaruni.setVisibility(View.GONE);
                                 } else {
                                     agregar.setVisibility(View.VISIBLE);
                                     bconsultar.setVisibility(View.GONE);
                                     beditar.setVisibility(View.GONE);
+                                    descargaruni.setVisibility(View.GONE);
                                     agregar.setOnClickListener(new View.OnClickListener() {
                                         @Override
                                         public void onClick(View v) {
@@ -361,9 +372,11 @@ public class Historialclinico extends AppCompatActivity {
                                 DocumentSnapshot document = task.getResult();
                                 if (document.exists()) {
                                     agregar.setVisibility(View.GONE);
+                                    descargaruni.setVisibility(View.GONE);
                                 } else {
                                     agregar.setVisibility(View.VISIBLE);
                                     bconsultar.setVisibility(View.GONE);
+                                    descargaruni.setVisibility(View.GONE);
                                     beditar.setVisibility(View.GONE);
                                     agregar.setOnClickListener(new View.OnClickListener() {
                                         @Override
@@ -408,9 +421,11 @@ public class Historialclinico extends AppCompatActivity {
                                 DocumentSnapshot document = task.getResult();
                                 if (document.exists()) {
                                     agregar.setVisibility(View.GONE);
+                                    descargaruni.setVisibility(View.GONE);
                                 } else {
                                     agregar.setVisibility(View.VISIBLE);
                                     bconsultar.setVisibility(View.GONE);
+                                    descargaruni.setVisibility(View.GONE);
                                     beditar.setVisibility(View.GONE);
                                     agregar.setOnClickListener(new View.OnClickListener() {
                                         @Override
