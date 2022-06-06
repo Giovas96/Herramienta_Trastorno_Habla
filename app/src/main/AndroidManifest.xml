@@ -14,7 +14,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Herramienta_Trastorno_Habla">
-        <activity android:name=".Opciones_Galeria_Anonymous"></activity>
+        <activity android:name=".Seleccion_obtencion_fonema"></activity>
+        <activity android:name=".Obtencion_fonema" />
+        <activity android:name=".Edit_palabras" />
+        <activity android:name=".Opciones_editar_palabras" />
+        <activity android:name=".Listar_palabras" />
+        <activity android:name=".Opciones_Galeria_Anonymous" />
         <activity android:name=".Opciones_Galeria" />
         <activity android:name=".Galeria_integracion" />
         <activity android:name=".Listar_actividades_ejercitacion_anonymous" />

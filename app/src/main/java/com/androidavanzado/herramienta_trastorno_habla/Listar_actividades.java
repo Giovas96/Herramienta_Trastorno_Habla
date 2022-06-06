@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 public class Listar_actividades extends AppCompatActivity {
     private ListView actividades;
-    ImageView back;
+    ImageView back, edit;
     String opciones []={"Discriminación Auditiva", "Obtención del fonema", "Fijación de fonema", "Ejercitación", "Integración" };
     int iconos [] = {R.drawable.escucha,R.drawable.discurso,R.drawable.rana, R.drawable.memoria, R.drawable.galeria};
 
@@ -21,11 +21,19 @@ public class Listar_actividades extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listar_actividades);
         back = findViewById(R.id.back_list_actividad);
-
+        edit=findViewById(R.id.edit_palabras);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent b = new Intent(Listar_actividades.this, SesionTerapeuta.class);
+                startActivity(b);
+            }
+        });
+
+        edit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent b = new Intent(Listar_actividades.this, Opciones_editar_palabras.class);
                 startActivity(b);
             }
         });

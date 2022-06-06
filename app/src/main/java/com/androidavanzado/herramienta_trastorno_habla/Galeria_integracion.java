@@ -43,7 +43,7 @@ public class Galeria_integracion extends AppCompatActivity {
     //game options
     String fonema;
     String position;
-    String ini="inicial";
+
     FirebaseFirestore nFirestore;
 
     @Override

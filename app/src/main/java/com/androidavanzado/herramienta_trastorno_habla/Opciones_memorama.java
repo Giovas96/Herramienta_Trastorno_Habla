@@ -16,7 +16,7 @@ public class Opciones_memorama extends AppCompatActivity {
     Button jbtnPlay;
     String palabracol, fonema, position;
 
-    ImageView back;
+    ImageView back,edit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +24,8 @@ public class Opciones_memorama extends AppCompatActivity {
         setContentView(R.layout.activity_opciones_memorama);
 
         back = findViewById(R.id.back_list_actividad);
-
+        edit=findViewById(R.id.edit_palabras);
+        edit.setVisibility(View.GONE);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
