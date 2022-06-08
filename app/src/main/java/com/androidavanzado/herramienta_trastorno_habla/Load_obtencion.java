@@ -19,6 +19,7 @@ import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.androidavanzado.herramienta_trastorno_habla.Objetos.Obtencion;
 import com.androidavanzado.herramienta_trastorno_habla.Objetos.Palabra;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -29,12 +30,10 @@ import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
-public class Load extends AppCompatActivity {
-
-    Spinner spin_fonema, spin_position;
-    EditText etName, etSentence;
+public class Load_obtencion extends AppCompatActivity {
+    Spinner spin_fonema;
     Button btnGuardar;
-    ImageView imageView, back, edit;
+    ImageView imageView, back,edit;
     ProgressBar progressBar;
 
     Uri imageUri;
@@ -43,21 +42,18 @@ public class Load extends AppCompatActivity {
     StorageReference reference = FirebaseStorage.getInstance().getReference();
 
     CollectionReference apalabra;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_load);
+        setContentView(R.layout.activity_load_obtencion);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);//vertical
-        spin_fonema = findViewById(R.id.spinner_fonema_load);
-        spin_position = findViewById(R.id.spinner_position_load);
-        etName = findViewById(R.id.etName_load);
-        etSentence = findViewById(R.id.etSentence_load);
+        spin_fonema = findViewById(R.id.spinner_fonema_obtencion);
 
-        btnGuardar = findViewById(R.id.btnGuardar_load);
+
+        btnGuardar = findViewById(R.id.btnGuardar_load_o);
 
         progressBar = findViewById(R.id.progressBar);
-        imageView = findViewById(R.id.imageView_load);
+        imageView = findViewById(R.id.imageView_load_obtencion);
 
         progressBar.setVisibility(View.INVISIBLE);
 
@@ -67,7 +63,7 @@ public class Load extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent b = new Intent(Load.this, Listar_actividades.class);
+                Intent b = new Intent(Load_obtencion.this, Seleccion_obtencion_fonema.class);
                 startActivity(b);
             }
         });
@@ -76,9 +72,7 @@ public class Load extends AppCompatActivity {
         ArrayAdapter<String> adapter_fonema = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item,fonemas);
         spin_fonema.setAdapter(adapter_fonema);
 
-        String [] position = {"inicial","sílaba directa","sílaba inversa","intervocálica"," sílaba trabada","final","grupo r","grupo l","grupo s"};
-        ArrayAdapter<String> adapter_position = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item,position);
-        spin_position.setAdapter(adapter_position);
+
 
         nFirestore= FirebaseFirestore.getInstance();
 
@@ -101,7 +95,7 @@ public class Load extends AppCompatActivity {
                     cargarAFirestore(imageUri);
 
                 }else{
-                    Toast.makeText(Load.this, "Selecciona una imagen por favor", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Load_obtencion.this, "Selecciona una imagen por favor", Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -128,54 +122,54 @@ public class Load extends AppCompatActivity {
         String fonema = spin_fonema.getSelectedItem().toString();
 
         if (fonema == "/p/"){
-            palabracol = "palabra_p";
+            palabracol = "obtencion_p";
         }else{
             if (fonema == "/t/"){
-                palabracol = "palabra_t";
+                palabracol = "obtencion_t";
             }else{
                 if (fonema == "/k/"){
-                    palabracol = "palabra_k";
+                    palabracol = "obtencion_k";
                 }else{
                     if (fonema == "/b/"){
-                        palabracol = "palabra_b";
+                        palabracol = "obtencion_b";
                     }else{
                         if (fonema == "/d/"){
-                            palabracol = "palabra_d";
+                            palabracol = "obtencion_d";
                         }else{
                             if (fonema == "/g/"){
-                                palabracol = "palabra_g";
+                                palabracol = "obtencion_g";
                             }else{
                                 if (fonema == "/f/"){
-                                    palabracol = "palabra_f";
+                                    palabracol = "obtencion_f";
                                 }else{
                                     if (fonema == "/s/"){
-                                        palabracol = "palabra_s";
+                                        palabracol = "obtencion_s";
                                     }else{
                                         if (fonema == "/x/"){
-                                            palabracol = "palabra_x";
+                                            palabracol = "obtencion_x";
                                         }else{
                                             if (fonema == "/c^/"){
-                                                palabracol = "palabra_ch";
+                                                palabracol = "obtencion_ch";
                                             }else{
                                                 if (fonema == "/m/"){
-                                                    palabracol = "palabra_m";
+                                                    palabracol = "obtencion_m";
                                                 }else{
                                                     if (fonema == "/n/"){
-                                                        palabracol = "palabra_n";
+                                                        palabracol = "obtencion_n";
                                                     }else{
                                                         if (fonema == "/ñ/"){
-                                                            palabracol = "palabra_ñ";
+                                                            palabracol = "obtencion_ñ";
                                                         }else{
                                                             if (fonema == "/l/"){
-                                                                palabracol = "palabra_l";
+                                                                palabracol = "obtencion_l";
                                                             }else{
                                                                 if (fonema == "/-r/"){
-                                                                    palabracol = "palabra_r";
+                                                                    palabracol = "obtencion_r";
                                                                 }else{
                                                                     if (fonema == "/r/"){
-                                                                        palabracol = "palabra_rr";
+                                                                        palabracol = "obtencion_rr";
                                                                     }else{
-                                                                        palabracol = "palabra_ll";
+                                                                        palabracol = "obtencion_ll";
                                                                     }
                                                                 }
                                                             }
@@ -193,9 +187,6 @@ public class Load extends AppCompatActivity {
             }
         }
 
-        String position = spin_position.getSelectedItem().toString();
-        String name = etName.getText().toString();
-        String sentence = etSentence.getText().toString();
 
         apalabra = nFirestore.collection(palabracol);
 
@@ -210,11 +201,11 @@ public class Load extends AppCompatActivity {
 
                         String imageUrl = uri.toString();
 
-                        Palabra palabra= new Palabra(position,name,sentence,imageUrl);
-                        apalabra.document(name).set(palabra);
+                        Obtencion palabra= new Obtencion(imageUrl,fonema);
+                        apalabra.add(palabra);
 
                         progressBar.setVisibility(View.INVISIBLE);
-                        Toast.makeText(Load.this, "Cargado correctamente", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Load_obtencion.this, "Cargado correctamente", Toast.LENGTH_SHORT).show();
                         imageView.setImageResource(R.drawable.ic_baseline_add_photo_alternate_24);
                     }
                 });
@@ -228,7 +219,7 @@ public class Load extends AppCompatActivity {
             @Override
             public void onFailure(@NonNull Exception e) {
                 progressBar.setVisibility(View.INVISIBLE);
-                Toast.makeText(Load.this, "La carga falló !!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Load_obtencion.this, "La carga falló !!", Toast.LENGTH_SHORT).show();
             }
         });
     }

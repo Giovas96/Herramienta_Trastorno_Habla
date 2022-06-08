@@ -3,6 +3,7 @@ package com.androidavanzado.herramienta_trastorno_habla;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -15,24 +16,37 @@ public class Opciones_rana extends AppCompatActivity {
     Spinner spin_fonema;
     Button jbtnPlay;
     String palabracol, fonema;
-
+    int a;
     ImageView back,edit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_opciones_rana);
-
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);//vertical
         back = findViewById(R.id.back_list_actividad);
+        a= getIntent().getIntExtra("anoni",0);
         edit=findViewById(R.id.edit_palabras);
         edit.setVisibility(View.GONE);
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent b = new Intent(Opciones_rana.this, Listar_actividades_fijacion.class);
-                startActivity(b);
-            }
-        });
+
+        if(a==1){
+            back.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent b = new Intent(Opciones_rana.this, Listar_actividades_fijacion_anonymous.class);
+                    startActivity(b);
+                }
+            });
+        }else{
+            back.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent b = new Intent(Opciones_rana.this, Listar_actividades_fijacion.class);
+                    startActivity(b);
+                }
+            });
+        }
+
 
         spin_fonema = findViewById(R.id.spinner_op_fonema_rana);
         jbtnPlay = findViewById(R.id.btn_Jugar_rana);

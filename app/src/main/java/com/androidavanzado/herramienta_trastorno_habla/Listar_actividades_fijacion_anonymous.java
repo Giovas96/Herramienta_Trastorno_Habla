@@ -3,6 +3,7 @@ package com.androidavanzado.herramienta_trastorno_habla;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -12,7 +13,7 @@ import android.widget.ListView;
 public class Listar_actividades_fijacion_anonymous extends AppCompatActivity {
 
     private ListView actividades;
-    ImageView back;
+    ImageView back,edit;
     String opciones []={"La rana (repetición de fonema)"};
     int iconos [] = {R.drawable.rana};
 
@@ -20,9 +21,10 @@ public class Listar_actividades_fijacion_anonymous extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listar_actividades_fijacion_anonymous);
-
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);//vertical
         back = findViewById(R.id.back_list_actividad);
-
+        edit=findViewById(R.id.edit_palabras);
+        edit.setVisibility(View.GONE);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -39,7 +41,9 @@ public class Listar_actividades_fijacion_anonymous extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 if (position==0){
                     //juego de rana
+                    int i=1;
                     Intent intent= new Intent(Listar_actividades_fijacion_anonymous.this, Opciones_rana.class);
+                    intent.putExtra("anoni",i);
                     startActivity(intent);
 
                 }

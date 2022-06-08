@@ -8,6 +8,7 @@ import androidx.core.content.ContextCompat;
 
 import android.app.Dialog;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.graphics.Canvas;
 import android.graphics.Paint;
@@ -73,6 +74,7 @@ public class Historialclinico extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_historialclinico);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);//vertical
         idpaciente =  getIntent().getStringExtra("idpa");
         ImageView back= findViewById(R.id.back_historial);
         TextView tittle= findViewById(R.id.title_historial);

@@ -3,6 +3,7 @@ package com.androidavanzado.herramienta_trastorno_habla.consultas;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -36,6 +37,7 @@ public class consultar_datos_paciente extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_consultar_datos_paciente);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);//vertical
         Inicializarpaciente();
         idpaciente= getIntent().getStringExtra("idp");
         mAuth=FirebaseAuth.getInstance();

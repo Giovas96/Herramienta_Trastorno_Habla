@@ -3,6 +3,7 @@ package com.androidavanzado.herramienta_trastorno_habla;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -15,24 +16,37 @@ public class Opciones_memorama extends AppCompatActivity {
     Spinner spin_fonema, spin_position;
     Button jbtnPlay;
     String palabracol, fonema, position;
-
+    int a;
     ImageView back,edit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_opciones_memorama);
-
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);//vertical
         back = findViewById(R.id.back_list_actividad);
+        a= getIntent().getIntExtra("anoni",0);
         edit=findViewById(R.id.edit_palabras);
         edit.setVisibility(View.GONE);
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent b = new Intent(Opciones_memorama.this, Listar_actividades_ejercitacion.class);
-                startActivity(b);
-            }
-        });
+
+        if(a==1){
+            back.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent b = new Intent(Opciones_memorama.this, Listar_actividades_ejercitacion_anonymous.class);
+                    startActivity(b);
+                }
+            });
+        }else{
+            back.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent b = new Intent(Opciones_memorama.this, Listar_actividades_ejercitacion.class);
+                    startActivity(b);
+                }
+            });
+        }
+
 
 
         spin_fonema = findViewById(R.id.spinner_op_fonema_memorama);

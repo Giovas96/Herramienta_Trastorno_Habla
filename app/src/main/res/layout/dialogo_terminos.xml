@@ -31,14 +31,16 @@
             android:textSize="24sp" />
     </LinearLayout>
 
-    <EditText
+    <TextView
         android:id="@+id/editTextTextMultiLine"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:ems="10"
         android:gravity="start|top"
         android:inputType="textMultiLine"
-        android:text="La aplicación esta dirigida principalmente a terapeutas que trabajan con transtornos del habla, pero algunas de sus funciones pueden ser utilizadas para otras especialidades.\n\nPor la función de agenda que tiene puede registrar pacientes, citas y hacer uso del historial médico que contiene la aplicación. \n\nDebe registrarse primero para poder hacer uso de la aplicación, una vez registrado por cuestiones de seguridad debe acceder con el correo y contraseña proporcionados."/>
+        android:text=
+            "-La aplicación esta dirigida principalmente a terapeutas que trabajan con transtornos del habla, la herramienta no reemplaza la opinión ni el trabajo de un profesional.\n\n-La herramienta mostrada tiene derechos de autor por lo que su comercialización sin la autorización del autor queda prohibida. \n\n
+            -Los autores no se hacen responsables por el mal uso de la herramienta. \n\n -Derechos reservado al Instituto Politécnico Nacional, a la Escuela Superior de Cómputo y sus respectivos creadores.\n\n -Al aceptar los terminos y condiciones se compromete a usar de manera correcta y eticamente correcto la herramienta, deslindando a sus autores de cualquier uso indevido que haga con ella."/>
 
 
 

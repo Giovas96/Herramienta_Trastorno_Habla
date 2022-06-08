@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -17,6 +18,7 @@ import com.androidavanzado.herramienta_trastorno_habla.Objetos.Pacientes;
 import com.androidavanzado.herramienta_trastorno_habla.Paciente;
 import com.androidavanzado.herramienta_trastorno_habla.R;
 import com.androidavanzado.herramienta_trastorno_habla.RegistroPaciente;
+import com.androidavanzado.herramienta_trastorno_habla.consultas.Consultar_tutor;
 import com.androidavanzado.herramienta_trastorno_habla.consultas.consultar_datos_paciente;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
@@ -40,6 +42,7 @@ public class Editar_paciente extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_editar_paciente);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);//vertical
         Inicializarpaciente();
         idpaciente= getIntent().getStringExtra("idp");
         mAuth=FirebaseAuth.getInstance();
@@ -52,6 +55,14 @@ public class Editar_paciente extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(Editar_paciente.this, Paciente.class);
                 i.putExtra("idpac",idpaciente);
+                startActivity(i);
+            }
+        });
+        DatosTutor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Editar_paciente.this, Editar_tutor.class);
+                i.putExtra("idp",idpaciente);
                 startActivity(i);
             }
         });

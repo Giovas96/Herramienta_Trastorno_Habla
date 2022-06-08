@@ -3,6 +3,7 @@ package com.androidavanzado.herramienta_trastorno_habla;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -23,6 +24,7 @@ public class Listar_actividades_anonymous extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listar_actividades_anonymous);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);//vertical
         back = findViewById(R.id.exit_list_actividad);
         mAuth=FirebaseAuth.getInstance();
 
@@ -46,7 +48,10 @@ public class Listar_actividades_anonymous extends AppCompatActivity {
                     Toast.makeText(Listar_actividades_anonymous.this, "Discriminación auditiva", Toast.LENGTH_SHORT).show();
                 } else if (position ==1){
                     //click en obtención del fonema
-                    Toast.makeText(Listar_actividades_anonymous.this, "Obtención de fonema", Toast.LENGTH_SHORT).show();
+                    int i=1;
+                    Intent intent= new Intent(Listar_actividades_anonymous.this, Seleccion_obtencion_fonema.class);
+                    intent.putExtra("anoni",i);
+                    startActivity(intent);
 
                 } else if (position ==2){
                     //click en fijación de fonema

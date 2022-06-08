@@ -3,6 +3,7 @@ package com.androidavanzado.herramienta_trastorno_habla;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -20,6 +21,7 @@ public class Listar_actividades extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listar_actividades);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);//vertical
         back = findViewById(R.id.back_list_actividad);
         edit=findViewById(R.id.edit_palabras);
         back.setOnClickListener(new View.OnClickListener() {
@@ -46,10 +48,13 @@ public class Listar_actividades extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 if (position==0){
                     //click en discriminacion auditiva
+
                     Toast.makeText(Listar_actividades.this, "Discriminación auditiva", Toast.LENGTH_SHORT).show();
                 } else if (position ==1){
                     //click en obtención del fonema
-                    Toast.makeText(Listar_actividades.this, "Obtención de fonema", Toast.LENGTH_SHORT).show();
+                    Intent intent= new Intent(Listar_actividades.this, Seleccion_obtencion_fonema.class);
+                    startActivity(intent);
+
 
                 } else if (position ==2){
                     //click en fijación de fonema

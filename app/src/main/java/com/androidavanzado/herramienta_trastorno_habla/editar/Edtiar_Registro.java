@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.view.View;
@@ -52,6 +53,7 @@ public class Edtiar_Registro extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edtiar__registro);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);//vertical
         mAuth = FirebaseAuth.getInstance();
         nFirestore = FirebaseFirestore.getInstance();
         user = mAuth.getCurrentUser();

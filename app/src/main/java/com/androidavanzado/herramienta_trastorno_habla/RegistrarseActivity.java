@@ -3,7 +3,9 @@ package com.androidavanzado.herramienta_trastorno_habla;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -33,11 +35,13 @@ public class RegistrarseActivity extends AppCompatActivity {
     EditText nombre, apellidop, apellidom, titulo, especialidad, direccion, cedula, telefono, correo, contrasena;
     FirebaseFirestore nFirestore;
     CheckBox terminos;
+    Dialog dialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registrarse);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);//vertical
         mAuth = FirebaseAuth.getInstance();
         nFirestore = FirebaseFirestore.getInstance();
         nombre = findViewById(R.id.nombreterapeuta);
@@ -52,17 +56,25 @@ public class RegistrarseActivity extends AppCompatActivity {
         contrasena = findViewById(R.id.text_contrasena);
         btnregister = findViewById(R.id.btn_registrarse);
         terminos= findViewById(R.id.Terminos_condiciones);
+        dialog = new Dialog(RegistrarseActivity.this);
+        dialog.setContentView(R.layout.dialogo_terminos);
+
 
 
         btnregister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                     registerUser();
-                    Intent i = new Intent(RegistrarseActivity.this, MainActivity.class);
-                    startActivity(i);
+
             }
         });
 
+        terminos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.show();
+            }
+        });
             }
 
 
@@ -84,14 +96,16 @@ public class RegistrarseActivity extends AppCompatActivity {
                 if (contruser.length() >= 8) {
                     if(terminos.isChecked()==true){
                     creatUser(nameuser, appuser, apmuser, tituser, espuser, direcuser, ceduser, teluser, correuser, contruser);
+                        Intent i = new Intent(RegistrarseActivity.this, MainActivity.class);
+                        startActivity(i);
                     }else{
                         Toast.makeText(RegistrarseActivity.this, "Por favor acepta los terminos y condiciones", Toast.LENGTH_SHORT).show();
                     }
                     } else {
-                    Toast.makeText(RegistrarseActivity.this, "Completaste los datos con un email invalido", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegistrarseActivity.this, "La contraseña debe contener 8 o mas caracteres", Toast.LENGTH_SHORT).show();
                 }
             } else {
-                Toast.makeText(RegistrarseActivity.this, "Completaste los datos y el email es incorrecto", Toast.LENGTH_SHORT).show();
+                Toast.makeText(RegistrarseActivity.this, "el email es incorrecto", Toast.LENGTH_SHORT).show();
             }
         }
         else {

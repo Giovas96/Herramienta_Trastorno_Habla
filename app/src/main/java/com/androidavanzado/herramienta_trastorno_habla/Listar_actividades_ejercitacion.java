@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Dialog;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -15,7 +16,7 @@ import android.widget.Toast;
 public class Listar_actividades_ejercitacion extends AppCompatActivity {
 
     private ListView actividades;
-    ImageView back;
+    ImageView back, edit;
     String opciones []={"Memorama (Ejercitación de fonema)"};
     int iconos [] = {R.drawable.memoria};
     Dialog dialog;
@@ -26,12 +27,13 @@ public class Listar_actividades_ejercitacion extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listar_actividades_ejercitacion);
-
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);//vertical
         dialog = new Dialog(Listar_actividades_ejercitacion.this);
         dialog.setContentView(R.layout.dialogo_memorama);
 
         back = findViewById(R.id.back_list_actividad);
-
+        edit=findViewById(R.id.edit_palabras);
+        edit.setVisibility(View.GONE);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -135,7 +135,8 @@ public class SesionTerapeuta extends AppCompatActivity {
 
                 } else if (position ==3){
                     //Click en Informacion
-
+                    Intent intent= new Intent(SesionTerapeuta.this, Manual_usuario.class);
+                    startActivity(intent);
                 }
             }
         });
